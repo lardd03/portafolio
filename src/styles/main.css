@@ -1,0 +1,303 @@
+/* Bootstrap 5 Import */
+@import 'bootstrap/dist/css/bootstrap.min.css';
+
+/* Bootstrap Icons Import */
+@import 'bootstrap-icons/font/bootstrap-icons.css';
+
+/* Variables CSS para tema oscuro profesional */
+:root {
+  /* Colores principales */
+  --primary-bg: #0d1117;
+  --secondary-bg: #161b22;
+  --card-bg: #21262d;
+  --border-color: #30363d;
+  
+  /* Colores de texto */
+  --text-primary: #f0f6fc;
+  --text-secondary: #8b949e;
+  --text-muted: #6e7681;
+  
+  /* Colores de acento */
+  --accent-cyan: #00bcd4;    /* Cyan */
+  --accent-green: #4dd0e1;   /* Light Cyan */
+  --accent-blue: #0288d1;    /* Blue */
+  --accent-purple: #1976d2;  /* Deep Blue */
+  
+  /* Gradientes */
+  --gradient-primary: linear-gradient(135deg, var(--accent-cyan) 0%, var(--accent-blue) 100%);
+  --gradient-secondary: linear-gradient(135deg, var(--accent-purple) 0%, var(--accent-green) 100%);
+  
+  /* Sombras */
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.5);
+  --shadow-glow: 0 0 20px rgba(124, 58, 237, 0.3);
+  
+  /* Tipografía */
+  --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --font-mono: 'Fira Code', 'SF Mono', Monaco, Inconsolata, 'Roboto Mono', monospace;
+}
+
+/* Reset y configuración base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--primary-bg);
+  color: var(--text-primary);
+  line-height: 1.6;
+  font-size: 16px;
+  overflow-x: hidden;
+}
+
+/* Personalización de Bootstrap para tema oscuro */
+.bg-dark-custom {
+  background-color: var(--primary-bg) !important;
+}
+
+.bg-secondary-custom {
+  background-color: var(--secondary-bg) !important;
+}
+
+.bg-card-custom {
+  background-color: var(--card-bg) !important;
+  border: 1px solid var(--border-color);
+}
+
+.text-primary-custom {
+  color: var(--text-primary) !important;
+}
+
+.text-secondary-custom {
+  color: var(--text-secondary) !important;
+}
+
+.text-muted-custom {
+  color: var(--text-muted) !important;
+}
+
+/* Botones personalizados */
+.btn-gradient-primary {
+  background: var(--gradient-primary);
+  border: none;
+  color: white;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: var(--shadow-sm);
+}
+
+.btn-gradient-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-glow);
+  color: white;
+}
+
+.btn-outline-custom {
+  border: 2px solid var(--accent-cyan);
+  color: var(--accent-cyan);
+  background: transparent;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-custom:hover {
+  background: var(--accent-cyan);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+/* Cards personalizadas */
+.card-custom {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.card-custom:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--accent-cyan);
+}
+
+/* Navbar personalizada */
+.navbar-custom {
+  background: rgba(13, 17, 23, 0.95) !important;
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border-color);
+  transition: all 0.3s ease;
+}
+
+.navbar-custom .navbar-brand {
+  font-weight: 700;
+  color: var(--text-primary) !important;
+  font-size: 1.5rem;
+}
+
+.navbar-custom .navbar-nav .nav-link {
+  color: var(--text-secondary) !important;
+  font-weight: 500;
+  margin: 0 0.5rem;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.navbar-custom .navbar-nav .nav-link:hover,
+.navbar-custom .navbar-nav .nav-link.active {
+  color: var(--accent-cyan) !important;
+}
+
+.navbar-custom .navbar-nav .nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--gradient-primary);
+  transition: width 0.3s ease;
+}
+
+.navbar-custom .navbar-nav .nav-link:hover::after,
+.navbar-custom .navbar-nav .nav-link.active::after {
+  width: 100%;
+}
+
+/* Footer personalizado */
+.footer-custom {
+  background: var(--secondary-bg);
+  border-top: 1px solid var(--border-color);
+  color: var(--text-secondary);
+}
+
+/* Animaciones */
+.fade-in {
+  animation: fadeIn 1s ease-in;
+}
+
+.slide-up {
+  animation: slideUp 0.8s ease-out;
+}
+
+.scale-in {
+  animation: scaleIn 0.6s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Utilidades personalizadas */
+.gradient-text {
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+}
+
+.section-padding {
+  padding: 5rem 0;
+}
+
+.hero-height {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+/* Código y monospace */
+.code-text {
+  font-family: var(--font-mono);
+  background: var(--card-bg);
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  border: 1px solid var(--border-color);
+  font-size: 0.9em;
+}
+
+/* Scrollbar personalizada */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--primary-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-cyan);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .section-padding {
+    padding: 3rem 0;
+  }
+  
+  .hero-height {
+    min-height: 80vh;
+  }
+  
+  .navbar-custom .navbar-nav .nav-link {
+    margin: 0.25rem 0;
+  }
+}
+
+/* Loading spinner personalizado */
+.spinner-custom {
+  border: 3px solid var(--border-color);
+  border-top: 3px solid var(--accent-cyan);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
