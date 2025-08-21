@@ -481,8 +481,8 @@ onMounted(() => {
 
 .project-wrapper {
   animation: slideUp 0.6s ease-out both;
-  width: 75%; /* Cards ocupan 3/4 del ancho de la pantalla */
-  max-width: 1200px; /* Ancho máximo para pantallas muy grandes */
+  width: 97.5%; /* Cards ocupan 3/4 + 30% del ancho de la pantalla (75% * 1.3 = 97.5%) */
+  max-width: 1560px; /* Ancho máximo para pantallas muy grandes (1200px * 1.3 = 1560px) */
 }
 
 .project-wrapper:last-child {
@@ -492,27 +492,43 @@ onMounted(() => {
 /* Responsive adjustments for project layout */
 @media (max-width: 1200px) {
   .project-wrapper {
-    width: 85%; /* Un poco más ancho en pantallas medianas */
+    width: 100%; /* Reducir para tablets grandes */
+    max-width: 1000px;
   }
 }
 
 @media (max-width: 992px) {
   .project-wrapper {
-    width: 90%; /* Más ancho en tablets */
+    width: 95%; /* Reducir para tablets */
     margin-bottom: 2rem !important;
   }
 }
 
 @media (max-width: 768px) {
   .project-wrapper {
-    width: 95%; /* Casi todo el ancho en móviles */
+    width: 90%; /* Reducir para móviles grandes */
+    margin-bottom: 1.5rem !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .project-wrapper {
+    width: 95%; /* Ajuste para móviles medianos */
     margin-bottom: 1.5rem !important;
   }
 }
 
 @media (max-width: 480px) {
   .project-wrapper {
-    width: 100%; /* Todo el ancho en móviles pequeños */
+    width: 98%; /* Casi todo el ancho en móviles pequeños */
+    margin-bottom: 1rem !important;
+  }
+}
+
+@media (max-width: 360px) {
+  .project-wrapper {
+    width: 100%; /* Ancho completo en móviles muy pequeños */
+    margin-bottom: 1rem !important;
   }
 }
 
@@ -573,6 +589,7 @@ onMounted(() => {
   
   .filters-section {
     position: relative !important;
+    padding: 1rem 0;
   }
   
   .active-filters {
@@ -590,6 +607,68 @@ onMounted(() => {
   
   .stat-number {
     font-size: 2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .page-header {
+    padding-top: 4.5rem;
+    padding-bottom: 2.5rem;
+  }
+  
+  .page-title {
+    font-size: 1.75rem;
+  }
+  
+  .filters-section .row > * {
+    margin-bottom: 0.75rem;
+  }
+  
+  .results-count {
+    text-align: center;
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+  }
+  
+  .empty-state {
+    padding: 2rem 1rem;
+  }
+  
+  .empty-state h3 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-title {
+    font-size: 1.5rem;
+  }
+  
+  .page-subtitle {
+    font-size: 0.95rem;
+  }
+  
+  .filters-section .container {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+  
+  .active-filters {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+  
+  .filter-badge {
+    font-size: 0.8rem;
+  }
+  
+  .stat-number {
+    font-size: 1.75rem;
+  }
+  
+  .stat-label {
+    font-size: 0.85rem;
   }
 }
 

@@ -8,4 +8,9 @@ export default defineConfig({
     vue(),
     VueDevTools()
   ],
+  base: '/portafolio/', // Reemplaza 'portafolio' con el nombre exacto de tu repositorio
+  build: {
+    outDir: 'dist',
+    assetsDir: 'assets'
+  }
 })

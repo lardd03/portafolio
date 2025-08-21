@@ -238,7 +238,7 @@ const skillCategories = [
     name: 'Frontend',
     icon: 'brush',
     description: 'Interfaces modernas y responsivas con las últimas tecnologías',
-    technologies: ['Vue.js', 'JavaScript', 'HTML5', 'CSS3', 'Bootstrap', 'Tailwind CSS', 'SCSS', 'React', 'Angular']
+    technologies: ['Vue.js', 'Vite', 'JavaScript', 'HTML5', 'CSS3', 'Bootstrap', 'Tailwind CSS', 'SCSS', 'React', 'Angular']
   },
   {
     name: 'Data',
@@ -274,6 +274,7 @@ onMounted(() => {
 .hero-section {
   position: relative;
   overflow: hidden;
+  padding: 2rem 0;
 }
 
 .hero-title {
@@ -473,6 +474,11 @@ onMounted(() => {
     height: 250px;
   }
   
+  .hero-actions .btn {
+    padding: 0.6rem 1.5rem;
+    font-size: 1rem;
+  }
+  
   .section-title {
     font-size: 2rem;
   }
@@ -496,16 +502,24 @@ onMounted(() => {
   .hero-description {
     text-align: center;
     margin: 0 auto;
+    font-size: 1rem;
+    max-width: 400px;
   }
   
   .hero-actions {
     justify-content: center;
+    margin-bottom: 2rem;
+  }
+  
+  .hero-actions .btn {
+    padding: 0.5rem 1.2rem;
+    font-size: 0.9rem;
   }
   
   .hero-avatar {
-    width: 200px;
-    height: 200px;
-    margin-top: 2rem;
+    width: 180px;
+    height: 180px;
+    margin-top: 1rem;
   }
   
   .skill-card {
@@ -522,6 +536,113 @@ onMounted(() => {
   
   .section-title {
     font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-title {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .hero-description {
+    font-size: 0.95rem;
+    max-width: 350px;
+    margin-bottom: 2rem;
+  }
+  
+  .hero-actions {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem !important;
+    margin-bottom: 2.5rem;
+  }
+  
+  .hero-actions .btn {
+    width: 100%;
+    max-width: 250px;
+    padding: 0.75rem 1rem;
+    font-size: 0.9rem;
+  }
+  
+  .hero-avatar {
+    width: 150px;
+    height: 150px;
+  }
+  
+  .section-title {
+    font-size: 1.6rem;
+  }
+  
+  .section-subtitle {
+    font-size: 1rem;
+    padding: 0 1rem;
+  }
+  
+  .skill-card {
+    padding: 1.25rem;
+  }
+  
+  .cta-title {
+    font-size: 1.75rem;
+  }
+  
+  .cta-actions {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .cta-actions .btn {
+    width: 100%;
+    max-width: 280px;
+    margin-bottom: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 1.5rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 0.95rem;
+  }
+  
+  .hero-description {
+    font-size: 0.9rem;
+    max-width: 300px;
+  }
+  
+  .hero-actions .btn {
+    max-width: 220px;
+    padding: 0.6rem 0.8rem;
+    font-size: 0.85rem;
+  }
+  
+  .hero-avatar {
+    width: 130px;
+    height: 130px;
+  }
+  
+  .floating-elements {
+    display: none; /* Ocultar elementos flotantes en pantallas muy pequeñas */
+  }
+  
+  .section-title {
+    font-size: 1.4rem;
+  }
+  
+  .stat-number {
+    font-size: 2rem;
+  }
+  
+  .stat-label {
+    font-size: 0.9rem;
   }
 }
 </style>

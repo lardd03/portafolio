@@ -6,15 +6,15 @@ export const useProjectsStore = defineStore('projects', {
     projects: [
       {
         id: 1,
-        title: 'Plataforma de E-Commerce Empresarial',
-        description: 'Sistema completo de comercio electrónico desarrollado para una empresa multinacional con procesamiento de pagos, gestión de inventario y panel administrativo avanzado.',
-        longDescription: 'Desarrollo de una plataforma de comercio electrónico completa para una empresa multinacional que maneja más de 10,000 productos. El sistema incluye autenticación multi-nivel, carrito de compras avanzado, procesamiento de pagos con múltiples métodos, gestión de inventario en tiempo real, sistema de cupones y descuentos, panel administrativo completo con analytics, y API REST para integración con sistemas externos. La plataforma está optimizada para alta concurrencia y maneja picos de tráfico de hasta 50,000 usuarios simultáneos.',
-        technologies: ['Vue.js', 'JavaScript', 'Node.js', 'Express', 'MongoDB', 'Redis', 'Stripe API', 'AWS', 'Docker'],
+        title: 'Sistema de Monitoreo',
+        description: 'Plataforma web diseñada para supervisar en tiempo real el desempeño operativo de estaciones de servicio, integrando visualización de métricas clave como niveles de inventario, volumen de ventas por tipo de producto, estado de tanques, precios de competencia y rendimiento por sucursal. Su interfaz intuitiva permite a los operadores tomar decisiones rápidas y fundamentadas desde cualquier dispositivo.',
+        longDescription: 'Este sistema consolida datos operativos críticos en una interfaz visual adaptable, permitiendo a empresas con múltiples estaciones de servicio gestionar inventarios, ventas, precios y estado de tanques con precisión. La plataforma incorpora control de accesos por roles, gestión avanzada de usuarios, alertas automatizadas y notificaciones en tiempo real. Gracias a su arquitectura híbrida con bases relacionales y no relacionales, permite escalar operaciones sin comprometer velocidad ni integridad de datos. Además, facilita auditorías internas, análisis de patrones de consumo y anticipación de necesidades logísticas, convirtiendo datos dispersos en insights accionables que promueven eficiencia, transparencia y control estratégico.',
+        technologies: ['Vue.js', 'JavaScript', 'Node.js', 'MySql', 'MongoDB', 'PHP', 'Python', 'Bootstrap'],
         category: 'web',
         status: 'completed',
         featured: true,
         stats: {
-          duration: '8 meses',
+          duration: '12 meses',
           teamSize: '6',
           complexity: 'Alta'
         },
@@ -22,39 +22,21 @@ export const useProjectsStore = defineStore('projects', {
           '/images/1.png',
           '/images/2.png',
           '/images/3.png',
-          '/images/4.png'
+          '/images/4.png',
+          '/images/5.png',
+          '/images/6.png',
+          '/images/7.png',
+          '/images/8.png',
+          '/images/9.png'
         ],
         demoUrl: null,
         githubUrl: null,
         createdAt: '2024-01-15',
-        updatedAt: '2024-03-20'
+        updatedAt: '2025-08-20'
       },
+
       {
         id: 2,
-        title: 'Sistema de Gestión de Proyectos Móvil',
-        description: 'Aplicación móvil empresarial para gestión de proyectos con colaboración en tiempo real, seguimiento de tareas y reportes automatizados.',
-        longDescription: 'Desarrollo de una aplicación móvil híbrida para la gestión integral de proyectos empresariales. La app permite la creación y asignación de tareas, seguimiento de progreso en tiempo real, comunicación entre equipos, gestión de documentos, notificaciones push inteligentes, reportes automatizados y dashboards personalizables. Incluye funcionalidades offline para trabajo sin conexión y sincronización automática al reconectar.',
-        technologies: ['React Native', 'TypeScript', 'Firebase', 'Redux', 'Socket.io', 'Node.js', 'PostgreSQL'],
-        category: 'mobile',
-        status: 'in-progress',
-        featured: true,
-        stats: {
-          duration: '6 meses',
-          teamSize: '4',
-          complexity: 'Media-Alta'
-        },
-        images: [
-          '/images/2.png',
-          '/images/3.png',
-          '/images/1.png'
-        ],
-        demoUrl: null,
-        githubUrl: null,
-        createdAt: '2024-02-10',
-        updatedAt: '2024-08-15'
-      },
-      {
-        id: 3,
         title: 'API REST con Python',
         description: 'API RESTful para gestión de usuarios y autenticación JWT',
         longDescription: 'API REST desarrollada con FastAPI y Python que proporciona endpoints para gestión de usuarios, autenticación JWT, validación de datos y documentación automática con Swagger.',
@@ -73,7 +55,7 @@ export const useProjectsStore = defineStore('projects', {
         updatedAt: '2024-04-12'
       },
       {
-        id: 4,
+        id: 3,
         title: 'Dashboard de Analytics Empresarial',
         description: 'Plataforma de visualización de datos empresariales con métricas en tiempo real, reportes automatizados y análisis predictivo.',
         longDescription: 'Desarrollo de una plataforma completa de business intelligence para una empresa de retail. El dashboard integra datos de múltiples fuentes (ventas, inventario, marketing, finanzas) y presenta visualizaciones interactivas en tiempo real. Incluye alertas automáticas, reportes programables, análisis de tendencias, predicciones basadas en ML, y exportación de datos en múltiples formatos. La plataforma procesa más de 1 millón de registros diarios.',
@@ -97,7 +79,7 @@ export const useProjectsStore = defineStore('projects', {
         updatedAt: '2024-06-30'
       },
       {
-        id: 5,
+        id: 4,
         title: 'Sistema de Gestión Desktop',
         description: 'Aplicación de escritorio para gestión de inventario y ventas',
         longDescription: 'Sistema completo de gestión empresarial desarrollado con Electron y Vue.js. Incluye gestión de inventario, ventas, clientes y reportes detallados.',
@@ -116,7 +98,7 @@ export const useProjectsStore = defineStore('projects', {
         updatedAt: '2024-08-10'
       },
       {
-        id: 6,
+        id: 5,
         title: 'Blog Personal',
         description: 'Blog personal con CMS personalizado y optimización SEO',
         longDescription: 'Blog personal desarrollado con Next.js que incluye sistema de gestión de contenido personalizado, optimización SEO, comentarios y newsletter.',
@@ -135,14 +117,14 @@ export const useProjectsStore = defineStore('projects', {
         updatedAt: '2024-07-25'
       },
       {
-        id: 7,
+        id: 6,
         title: 'Microservicio de Notificaciones',
         description: 'Servicio de notificaciones en tiempo real con múltiples canales',
         longDescription: 'Microservicio desarrollado con Node.js para envío de notificaciones multi-canal (email, SMS, push). Incluye cola de mensajes, plantillas y analytics.',
         technologies: ['Node.js', 'Express', 'Redis', 'RabbitMQ', 'SendGrid', 'Firebase'],
         category: 'api',
         status: 'completed',
-        featured: false,
+        featured: true,
         images: [
           '/images/3.png',
           '/images/1.png',
@@ -154,7 +136,7 @@ export const useProjectsStore = defineStore('projects', {
         updatedAt: '2024-08-05'
       },
       {
-        id: 8,
+        id: 7,
         title: 'Juego Web Interactivo',
         description: 'Juego de puzzle desarrollado con Canvas y JavaScript vanilla',
         longDescription: 'Juego de rompecabezas interactivo desarrollado con JavaScript vanilla y Canvas API. Incluye múltiples niveles, sistema de puntuación y almacenamiento local.',
