@@ -81,18 +81,13 @@
       <div class="row align-items-center">
         <div class="col-md-6">
           <p class="text-muted-custom mb-0">
-            © {{ currentYear }} {{ mainStore.appTitle }}. Todos los derechos reservados.
+            © {{ currentYear }} Portafolio profesional. Uso exclusivo para fines informativos y de presentación.
           </p>
         </div>
-        <div class="col-md-6 text-md-end">
-          <p class="text-muted-custom mb-0">
-            Hecho con <i class="bi bi-heart-fill text-danger"></i> y 
-            <span class="code-text">Vue.js</span>
-          </p>
-        </div>
+
       </div>
     </div>
-  </footer>
+  </footer>|
 </template>
 
 <script setup>

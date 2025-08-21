@@ -63,10 +63,10 @@
         <div class="row">
           <div class="col-12 text-center mb-5">
             <h2 class="section-title">
-              <span class="gradient-text">Tecnologías</span> que domino
+              <span class="gradient-text">Stack</span> tecnológico
             </h2>
             <p class="section-subtitle text-secondary-custom">
-              He utilizado una variedad de herramientas y tecnologías para construir proyectos innovadores en el campo del análisis de Datos, virtualización y desarrollo web.
+             A lo largo de mi trayectoria he explorado el potencial de la tecnología para resolver problemas reales. Desde el análisis profundo de datos hasta la creación de interfaces web interactivas y entornos virtuales, cada proyecto ha sido una oportunidad para innovar y aprender
             </p>
           </div>
         </div>
@@ -127,14 +127,12 @@
             </div>
           </div>
           <div
-            v-for="project in featuredProjects.slice(0, 3)"
+            v-for="(project, index) in featuredProjects.slice(0, 3)"
             :key="project.id"
             class="col-lg-4 col-md-6"
+            :style="`animation-delay: ${index * 0.2}s`"
           >
-            <ProjectCard
-              :project="project"
-              @open-project="openProjectModal"
-            />
+            <FeaturedProjectCard :project="project" />
           </div>
         </div>
         <div class="row mt-5" v-if="featuredProjects.length > 0">
@@ -217,7 +215,7 @@
 import { computed, onMounted } from 'vue'
 import { useMainStore } from '../stores/mainStore'
 import { useProjectsStore } from '../stores/projectsStore'
-import ProjectCard from '../components/ProjectCard.vue'
+import FeaturedProjectCard from '../components/FeaturedProjectCard.vue'
 import akazaImage from '../assets/images/akaza.jpg'
 
 const mainStore = useMainStore()
@@ -243,27 +241,22 @@ const skillCategories = [
     technologies: ['Vue.js', 'JavaScript', 'HTML5', 'CSS3', 'Bootstrap', 'Tailwind CSS', 'SCSS', 'React', 'Angular']
   },
   {
-    name: 'Backend',
-    icon: 'server',
-    description: 'APIs robustas y escalables para aplicaciones complejas',
-    technologies: ['Node.js', 'Express', 'Python', 'Django', 'PostgreSQL']
+    name: 'Data',
+    icon: 'bar-chart-line',
+    description: 'Análisis de datos y visualización para insights empresariales',
+    technologies: ['Python', 'Pandas', 'NumPy', 'Power BI', 'Excel', 'Matplotlib', 'Seaborn', 'PostgreSQL', 'MySQL', 'Tableau', 'CONDA']
   },
   {
     name: 'Herramientas',
     icon: 'tools',
-    description: 'Flujo de trabajo optimizado con herramientas modernas',
-    technologies: ['Git', 'Docker', 'VS Code', 'Postman', 'Figma']
+    description: 'Optimización de flujos de trabajo, integración continua, despliegue automatizado, virtualización de entornos y pruebas automatizadas.',
+    technologies: ['Git', 'Docker', 'Postman', 'TeamCity', 'Jest', 'Cypress','Hyper-V','Bash y PowerShell','Vmware']
   }
 ]
 
 // Métodos
 const handleAvatarError = (event) => {
   event.target.src = '/placeholder-avatar.jpg'
-}
-
-const openProjectModal = (project) => {
-  projectsStore.selectProject(project)
-  projectsStore.toggleProjectModal(true)
 }
 
 // Lifecycle

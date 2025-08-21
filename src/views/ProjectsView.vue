@@ -166,20 +166,19 @@
           </button>
         </div>
 
-        <!-- Projects Grid -->
-        <div v-else class="row g-4">
-          <div
-            v-for="(project, index) in filteredProjects"
-            :key="project.id"
-            class="col-lg-4 col-md-6"
-          >
-            <ProjectCard
-              :project="project"
-              @open-project="openProjectModal"
-              @open-demo="handleOpenDemo"
-              @open-github="handleOpenGithub"
-              :style="`animation-delay: ${index * 0.1}s`"
-            />
+        <!-- Projects Grid - Single Column Layout -->
+        <div v-else class="row justify-content-center">
+          <div class="col-12">
+            <div class="projects-single-column">
+              <div
+                v-for="(project, index) in filteredProjects"
+                :key="project.id"
+                class="project-wrapper mb-4"
+                :style="`animation-delay: ${index * 0.1}s`"
+              >
+                <ProjectCard :project="project" />
+              </div>
+            </div>
           </div>
         </div>
 
@@ -309,21 +308,6 @@ const clearAllFilters = () => {
 const getCategoryName = (categoryId) => {
   const category = categories.value.find(cat => cat.id === categoryId)
   return category ? category.name : categoryId
-}
-
-const openProjectModal = (project) => {
-  projectsStore.selectProject(project)
-  projectsStore.toggleProjectModal(true)
-}
-
-const handleOpenDemo = (project) => {
-  // Analytics o tracking aquí si es necesario
-  console.log('Demo opened for project:', project.title)
-}
-
-const handleOpenGithub = (project) => {
-  // Analytics o tracking aquí si es necesario
-  console.log('GitHub opened for project:', project.title)
 }
 
 const loadMore = async () => {
@@ -485,6 +469,51 @@ onMounted(() => {
 .clear-all-btn {
   font-size: 0.875rem;
   padding: 0.25rem 0.75rem;
+}
+
+/* Projects Grid - Single Column */
+.projects-single-column {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.project-wrapper {
+  animation: slideUp 0.6s ease-out both;
+  width: 75%; /* Cards ocupan 3/4 del ancho de la pantalla */
+  max-width: 1200px; /* Ancho máximo para pantallas muy grandes */
+}
+
+.project-wrapper:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* Responsive adjustments for project layout */
+@media (max-width: 1200px) {
+  .project-wrapper {
+    width: 85%; /* Un poco más ancho en pantallas medianas */
+  }
+}
+
+@media (max-width: 992px) {
+  .project-wrapper {
+    width: 90%; /* Más ancho en tablets */
+    margin-bottom: 2rem !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .project-wrapper {
+    width: 95%; /* Casi todo el ancho en móviles */
+    margin-bottom: 1.5rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .project-wrapper {
+    width: 100%; /* Todo el ancho en móviles pequeños */
+  }
 }
 
 /* Projects Grid */

@@ -12,7 +12,7 @@ export const useMainStore = defineStore('main', {
       name: 'Juan Carlos Mejia Arguello',
       title: '',
       description: '',
-      email: '',
+      email: 'mejiaarguellojuancarlos@gmail.com',
       phone: '',
       location: '',
       avatar: '',

@@ -23,12 +23,8 @@
           <div class="col-lg-5">
             <div class="profile-image-container text-center">
               <div class="profile-image-wrapper">
-                <img
-                  :src="personalInfo.avatar || '/placeholder-avatar.jpg'"
-                  :alt="personalInfo.name || 'Perfil'"
-                  class="profile-image"
-                  @error="handleImageError"
-                >
+                <img :src="akazaImage" :alt="personalInfo.name || 'Perfil'" class="profile-image"
+                  @error="handleImageError">
                 <div class="image-overlay">
                   <div class="overlay-content">
                     <i class="bi bi-person-circle"></i>
@@ -71,7 +67,7 @@
                 <p class="lead text-secondary-custom mb-4">
                   {{ personalInfo.description || defaultDescription }}
                 </p>
-                
+
                 <!-- Aquí se agregará más contenido personalizado posteriormente -->
                 <div class="story-sections">
                   <div class="story-section mb-4">
@@ -80,21 +76,25 @@
                       Mi Pasión
                     </h4>
                     <p class="text-secondary-custom">
-                      La programación para mí es más que líneas de código; es la capacidad de crear soluciones 
-                      que impacten positivamente la vida de las personas. Me motiva la constante evolución 
-                      de las tecnologías y los desafíos que cada proyecto único presenta.
+                      Pienso que la programación no es solo escribir código; es diseñar soluciones que no exploten
+                      (mucho), que
+                      funcionen en producción y que,
+                      con suerte, mejoren la vida de alguien más allá de la pantalla. Adoro que la tecnología nunca
+                      se queda quieta, y cada proyecto es como un nuevo acertijo que no viene con instrucciones,
+                      pero sí con muchos bugs.
                     </p>
                   </div>
-                  
+
                   <div class="story-section mb-4">
                     <h4 class="text-primary-custom mb-3">
                       <i class="bi bi-target me-2"></i>
                       Mi Enfoque
                     </h4>
                     <p class="text-secondary-custom">
-                      Creo en el desarrollo centrado en el usuario, código limpio y mantenible, y en la 
-                      importancia de mantenerse actualizado con las mejores prácticas y tecnologías emergentes. 
-                      Cada proyecto es una oportunidad para aprender y mejorar.
+                      Creo en escribir código que no solo funcione, sino que sea legible incluso después de tres cafés y
+                      seis meses.
+                      El desarrollo centrado en el usuario no es una opción: es el punto de partida.
+                      Me esfuerzo por crear experiencias que sean intuitivas, accesibles y, sobre todo, útiles.
                     </p>
                   </div>
 
@@ -104,8 +104,8 @@
                       Mi Objetivo
                     </h4>
                     <p class="text-secondary-custom">
-                      Busco constantemente expandir mis habilidades y contribuir a proyectos que generen 
-                      un impacto real. Mi meta es combinar creatividad y tecnología para desarrollar 
+                      Busco constantemente expandir mis habilidades y contribuir a proyectos que generen
+                      un impacto real. Mi objetivo es combinar creatividad y tecnología para desarrollar
                       aplicaciones innovadoras y eficientes.
                     </p>
                   </div>
@@ -131,15 +131,8 @@
           </div>
         </div>
         <div class="row g-4">
-          <div
-            v-for="(skillCategory, index) in skillsData"
-            :key="skillCategory.category"
-            class="col-lg-4 col-md-6"
-          >
-            <div 
-              class="skill-category-card card-custom h-100"
-              :style="`animation-delay: ${index * 0.2}s`"
-            >
+          <div v-for="(skillCategory, index) in skillsData" :key="skillCategory.category" class="col-lg-4 col-md-6">
+            <div class="skill-category-card card-custom h-100" :style="`animation-delay: ${index * 0.2}s`">
               <div class="skill-category-header">
                 <div class="skill-icon">
                   <i :class="`bi bi-${skillCategory.icon}`"></i>
@@ -147,20 +140,13 @@
                 <h4 class="skill-category-title">{{ skillCategory.category }}</h4>
               </div>
               <div class="skills-list">
-                <div
-                  v-for="skill in skillCategory.skills"
-                  :key="skill.name"
-                  class="skill-item"
-                >
+                <div v-for="skill in skillCategory.skills" :key="skill.name" class="skill-item">
                   <div class="skill-info">
                     <span class="skill-name">{{ skill.name }}</span>
                     <span class="skill-level">{{ skill.level }}%</span>
                   </div>
                   <div class="skill-bar">
-                    <div 
-                      class="skill-progress"
-                      :style="`width: ${skill.level}%`"
-                    ></div>
+                    <div class="skill-progress" :style="`width: ${skill.level}%`"></div>
                   </div>
                 </div>
               </div>
@@ -186,12 +172,8 @@
         <div class="row justify-content-center">
           <div class="col-lg-8">
             <div class="timeline">
-              <div
-                v-for="(experience, index) in experienceData"
-                :key="index"
-                class="timeline-item"
-                :class="{ 'timeline-item-right': index % 2 === 1 }"
-              >
+              <div v-for="(experience, index) in experienceData" :key="index" class="timeline-item"
+                :class="{ 'timeline-item-right': index % 2 === 1 }">
                 <div class="timeline-marker">
                   <i :class="`bi bi-${experience.icon}`"></i>
                 </div>
@@ -205,11 +187,8 @@
                     {{ experience.description }}
                   </p>
                   <div class="timeline-skills" v-if="experience.technologies">
-                    <span
-                      v-for="tech in experience.technologies"
-                      :key="tech"
-                      class="badge bg-secondary-custom me-1 mb-1"
-                    >
+                    <span v-for="tech in experience.technologies" :key="tech"
+                      class="badge bg-secondary-custom me-1 mb-1">
                       {{ tech }}
                     </span>
                   </div>
@@ -235,15 +214,8 @@
           </div>
         </div>
         <div class="row g-4">
-          <div
-            v-for="(interest, index) in interests"
-            :key="interest.title"
-            class="col-lg-3 col-md-6"
-          >
-            <div 
-              class="interest-card text-center"
-              :style="`animation-delay: ${index * 0.1}s`"
-            >
+          <div v-for="(interest, index) in interests" :key="interest.title" class="col-lg-3 col-md-6">
+            <div class="interest-card text-center" :style="`animation-delay: ${index * 0.1}s`">
               <div class="interest-icon">
                 <i :class="`bi bi-${interest.icon}`"></i>
               </div>
@@ -266,7 +238,7 @@
               ¿Quieres trabajar conmigo?
             </h2>
             <p class="cta-description text-secondary-custom mb-5 lead">
-              Estoy siempre abierto a nuevas oportunidades y colaboraciones emocionantes. 
+              Estoy siempre abierto a nuevas oportunidades y colaboraciones emocionantes.
               ¡Hablemos sobre tu próximo proyecto!
             </p>
             <div class="cta-actions d-flex justify-content-center gap-3 flex-wrap">
@@ -274,15 +246,10 @@
                 <i class="bi bi-chat-dots me-2"></i>
                 Contactar
               </router-link>
-              <a
-                href="/cv.pdf"
-                target="_blank"
-                class="btn btn-outline-custom btn-lg"
-                download
-              >
+<!--               <a href="/cv.pdf" target="_blank" class="btn btn-outline-custom btn-lg" download>
                 <i class="bi bi-download me-2"></i>
                 Descargar CV
-              </a>
+              </a> -->
             </div>
           </div>
         </div>
@@ -294,6 +261,7 @@
 <script setup>
 import { computed, onMounted } from 'vue'
 import { useMainStore } from '../stores/mainStore'
+import akazaImage from '../assets/images/akaza.jpg'
 
 const mainStore = useMainStore()
 
@@ -372,22 +340,23 @@ const interests = [
   {
     title: 'Tecnología',
     icon: 'cpu',
-    description: 'Siempre explorando nuevas tecnologías y tendencias en desarrollo'
+    description: 'Siempre investigando las tendencias mas recientes de hardware y sus aplicaciones'
   },
-  {
-    title: 'Diseño',
-    icon: 'palette',
-    description: 'Apasionado por el diseño UI/UX y la experiencia del usuario'
-  },
+
   {
     title: 'Aprendizaje',
     icon: 'book',
-    description: 'Constante búsqueda de conocimiento y mejora profesional'
+    description: 'Constante búsqueda de conocimientos y nuevas habilidades'
   },
   {
     title: 'Colaboración',
     icon: 'people',
-    description: 'Trabajo en equipo y contribución a proyectos open source'
+    description: 'Disfruto colaborar en equipo y conectar con personas tanto en el entorno laboral como fuera de la oficina.'
+  },
+  {
+    title: 'Deporte',
+    icon: 'person-arms-up',
+    description: 'Apasionado por el deporte, especialmente el voleibol y el entrenamiento físico.'
   }
 ]
 
@@ -702,16 +671,16 @@ onMounted(() => {
   .page-title {
     font-size: 2.5rem;
   }
-  
+
   .profile-image {
     width: 250px;
     height: 250px;
   }
-  
+
   .timeline::before {
     left: 1.5rem;
   }
-  
+
   .timeline-item,
   .timeline-item-right {
     width: 100%;
@@ -719,13 +688,13 @@ onMounted(() => {
     padding-left: 4rem;
     padding-right: 0;
   }
-  
+
   .timeline-marker,
   .timeline-item-right .timeline-marker {
     left: 0;
     right: auto;
   }
-  
+
   .timeline-header {
     flex-direction: column;
     align-items: flex-start;
@@ -738,36 +707,36 @@ onMounted(() => {
     padding-top: 5rem;
     padding-bottom: 3rem;
   }
-  
+
   .page-title {
     font-size: 2rem;
   }
-  
+
   .profile-image {
     width: 200px;
     height: 200px;
   }
-  
+
   .about-content .section-title {
     font-size: 2rem;
   }
-  
+
   .skill-category-card {
     padding: 1.5rem;
   }
-  
+
   .timeline-item {
     padding-left: 3rem;
   }
-  
+
   .timeline-content {
     padding: 1.5rem;
   }
-  
+
   .cta-title {
     font-size: 2rem;
   }
-  
+
   .story-section {
     margin-left: 0.5rem;
     padding: 1rem;
@@ -780,6 +749,7 @@ onMounted(() => {
     opacity: 0;
     transform: translateY(20px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -791,6 +761,7 @@ onMounted(() => {
     opacity: 0;
     transform: scale(0.9);
   }
+
   to {
     opacity: 1;
     transform: scale(1);

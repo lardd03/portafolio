@@ -67,12 +67,12 @@ onMounted(() => {
   mainStore.updatePersonalInfo({
     name: 'Juan Carlos Mejia Arguello',
     title: 'Analista de Datos, Desarrollador y Software Tester',
-    description: 'Apasionado por crear soluciones innovadoras y experiencias digitales excepcionales.',
-    email: 'tu@email.com',
-    location: 'Tu Ciudad, País',
+    description: 'Apasionado por sumergirse en las minucias de los datos, crear experiencias digitales intuitivas y asegurar la calidad del software.',
+    email: 'mejiaarguellojuancarlos@gmail.com',
+    location: 'Puebla de Zaragoza, México',
     socialLinks: {
       github: 'https://github.com/tu-usuario',
-      linkedin: 'https://linkedin.com/in/tu-perfil',
+      linkedin: 'https://www.linkedin.com/in/juan-carlos-mejia-arguello-25b457267/',
       // Agrega más redes sociales según necesites
     }
   })

@@ -2,27 +2,176 @@ import { defineStore } from 'pinia'
 
 export const useProjectsStore = defineStore('projects', {
   state: () => ({
-    // Lista de proyectos (se llenará posteriormente con datos reales)
+    // Lista de proyectos con datos dummy para demostración
     projects: [
-      // Estructura de ejemplo para referencia futura:
-      // {
-      //   id: 1,
-      //   title: 'Nombre del Proyecto',
-      //   description: 'Descripción breve del proyecto',
-      //   longDescription: 'Descripción detallada del proyecto...',
-      //   technologies: ['JavaScript', 'Vue.js', 'Node.js'],
-      //   category: 'web', // web, mobile, desktop, api, etc.
-      //   status: 'completed', // completed, in-progress, planned
-      //   featured: true,
-      //   images: [
-      //     '/images/project1-1.jpg',
-      //     '/images/project1-2.jpg'
-      //   ],
-      //   demoUrl: 'https://demo.com',
-      //   githubUrl: 'https://github.com/usuario/proyecto',
-      //   createdAt: '2024-01-01',
-      //   updatedAt: '2024-01-15'
-      // }
+      {
+        id: 1,
+        title: 'Plataforma de E-Commerce Empresarial',
+        description: 'Sistema completo de comercio electrónico desarrollado para una empresa multinacional con procesamiento de pagos, gestión de inventario y panel administrativo avanzado.',
+        longDescription: 'Desarrollo de una plataforma de comercio electrónico completa para una empresa multinacional que maneja más de 10,000 productos. El sistema incluye autenticación multi-nivel, carrito de compras avanzado, procesamiento de pagos con múltiples métodos, gestión de inventario en tiempo real, sistema de cupones y descuentos, panel administrativo completo con analytics, y API REST para integración con sistemas externos. La plataforma está optimizada para alta concurrencia y maneja picos de tráfico de hasta 50,000 usuarios simultáneos.',
+        technologies: ['Vue.js', 'JavaScript', 'Node.js', 'Express', 'MongoDB', 'Redis', 'Stripe API', 'AWS', 'Docker'],
+        category: 'web',
+        status: 'completed',
+        featured: true,
+        stats: {
+          duration: '8 meses',
+          teamSize: '6',
+          complexity: 'Alta'
+        },
+        images: [
+          '/images/1.png',
+          '/images/2.png',
+          '/images/3.png',
+          '/images/4.png'
+        ],
+        demoUrl: null,
+        githubUrl: null,
+        createdAt: '2024-01-15',
+        updatedAt: '2024-03-20'
+      },
+      {
+        id: 2,
+        title: 'Sistema de Gestión de Proyectos Móvil',
+        description: 'Aplicación móvil empresarial para gestión de proyectos con colaboración en tiempo real, seguimiento de tareas y reportes automatizados.',
+        longDescription: 'Desarrollo de una aplicación móvil híbrida para la gestión integral de proyectos empresariales. La app permite la creación y asignación de tareas, seguimiento de progreso en tiempo real, comunicación entre equipos, gestión de documentos, notificaciones push inteligentes, reportes automatizados y dashboards personalizables. Incluye funcionalidades offline para trabajo sin conexión y sincronización automática al reconectar.',
+        technologies: ['React Native', 'TypeScript', 'Firebase', 'Redux', 'Socket.io', 'Node.js', 'PostgreSQL'],
+        category: 'mobile',
+        status: 'in-progress',
+        featured: true,
+        stats: {
+          duration: '6 meses',
+          teamSize: '4',
+          complexity: 'Media-Alta'
+        },
+        images: [
+          '/images/2.png',
+          '/images/3.png',
+          '/images/1.png'
+        ],
+        demoUrl: null,
+        githubUrl: null,
+        createdAt: '2024-02-10',
+        updatedAt: '2024-08-15'
+      },
+      {
+        id: 3,
+        title: 'API REST con Python',
+        description: 'API RESTful para gestión de usuarios y autenticación JWT',
+        longDescription: 'API REST desarrollada con FastAPI y Python que proporciona endpoints para gestión de usuarios, autenticación JWT, validación de datos y documentación automática con Swagger.',
+        technologies: ['Python', 'FastAPI', 'PostgreSQL', 'JWT', 'Docker', 'Swagger'],
+        category: 'api',
+        status: 'completed',
+        featured: false,
+        images: [
+          '/images/4.png',
+          '/images/1.png',
+          '/images/2.png'
+        ],
+        demoUrl: null,
+        githubUrl: null,
+        createdAt: '2024-03-05',
+        updatedAt: '2024-04-12'
+      },
+      {
+        id: 4,
+        title: 'Dashboard de Analytics Empresarial',
+        description: 'Plataforma de visualización de datos empresariales con métricas en tiempo real, reportes automatizados y análisis predictivo.',
+        longDescription: 'Desarrollo de una plataforma completa de business intelligence para una empresa de retail. El dashboard integra datos de múltiples fuentes (ventas, inventario, marketing, finanzas) y presenta visualizaciones interactivas en tiempo real. Incluye alertas automáticas, reportes programables, análisis de tendencias, predicciones basadas en ML, y exportación de datos en múltiples formatos. La plataforma procesa más de 1 millón de registros diarios.',
+        technologies: ['React', 'TypeScript', 'D3.js', 'Chart.js', 'Python', 'FastAPI', 'PostgreSQL', 'Redis', 'Apache Kafka'],
+        category: 'web',
+        status: 'completed',
+        featured: true,
+        stats: {
+          duration: '10 meses',
+          teamSize: '8',
+          complexity: 'Muy Alta'
+        },
+        images: [
+          '/images/3.png',
+          '/images/4.png',
+          '/images/1.png'
+        ],
+        demoUrl: null,
+        githubUrl: null,
+        createdAt: '2024-04-20',
+        updatedAt: '2024-06-30'
+      },
+      {
+        id: 5,
+        title: 'Sistema de Gestión Desktop',
+        description: 'Aplicación de escritorio para gestión de inventario y ventas',
+        longDescription: 'Sistema completo de gestión empresarial desarrollado con Electron y Vue.js. Incluye gestión de inventario, ventas, clientes y reportes detallados.',
+        technologies: ['Electron', 'Vue.js', 'SQLite', 'JavaScript', 'Node.js'],
+        category: 'desktop',
+        status: 'in-progress',
+        featured: false,
+        images: [
+          '/images/1.png',
+          '/images/3.png',
+          '/images/4.png'
+        ],
+        demoUrl: null,
+        githubUrl: null,
+        createdAt: '2024-05-15',
+        updatedAt: '2024-08-10'
+      },
+      {
+        id: 6,
+        title: 'Blog Personal',
+        description: 'Blog personal con CMS personalizado y optimización SEO',
+        longDescription: 'Blog personal desarrollado con Next.js que incluye sistema de gestión de contenido personalizado, optimización SEO, comentarios y newsletter.',
+        technologies: ['Next.js', 'React', 'Tailwind CSS', 'Prisma', 'PostgreSQL', 'Vercel'],
+        category: 'web',
+        status: 'completed',
+        featured: false,
+        images: [
+          '/images/2.png',
+          '/images/4.png',
+          '/images/1.png'
+        ],
+        demoUrl: null,
+        githubUrl: null,
+        createdAt: '2024-06-01',
+        updatedAt: '2024-07-25'
+      },
+      {
+        id: 7,
+        title: 'Microservicio de Notificaciones',
+        description: 'Servicio de notificaciones en tiempo real con múltiples canales',
+        longDescription: 'Microservicio desarrollado con Node.js para envío de notificaciones multi-canal (email, SMS, push). Incluye cola de mensajes, plantillas y analytics.',
+        technologies: ['Node.js', 'Express', 'Redis', 'RabbitMQ', 'SendGrid', 'Firebase'],
+        category: 'api',
+        status: 'completed',
+        featured: false,
+        images: [
+          '/images/3.png',
+          '/images/1.png',
+          '/images/2.png'
+        ],
+        demoUrl: null,
+        githubUrl: null,
+        createdAt: '2024-07-10',
+        updatedAt: '2024-08-05'
+      },
+      {
+        id: 8,
+        title: 'Juego Web Interactivo',
+        description: 'Juego de puzzle desarrollado con Canvas y JavaScript vanilla',
+        longDescription: 'Juego de rompecabezas interactivo desarrollado con JavaScript vanilla y Canvas API. Incluye múltiples niveles, sistema de puntuación y almacenamiento local.',
+        technologies: ['JavaScript', 'HTML5 Canvas', 'CSS3', 'Local Storage'],
+        category: 'web',
+        status: 'completed',
+        featured: false,
+        images: [
+          '/images/4.png',
+          '/images/2.png',
+          '/images/3.png'
+        ],
+        demoUrl: null,
+        githubUrl: null,
+        createdAt: '2024-01-30',
+        updatedAt: '2024-02-20'
+      }
     ],
     
     // Filtros y configuración
