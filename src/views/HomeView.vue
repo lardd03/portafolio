@@ -5,7 +5,9 @@
       <div class="container">
         <div class="row align-items-center">
           <div class="col-lg-6">
-            <div class="hero-content fade-in">
+      const handleImageError = (event) => {
+  event.target.src = akazaImage
+}   <div class="hero-content fade-in">
               <h1 class="hero-title mb-4">
                 Hola, soy
                 <span class="gradient-text d-block">{{ personalInfo.name || 'Tu Nombre' }}</span>

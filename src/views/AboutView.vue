@@ -362,7 +362,7 @@ const interests = [
 
 // Methods
 const handleImageError = (event) => {
-  event.target.src = '/placeholder-avatar.jpg'
+  event.target.src = akazaImage
 }
 
 // Lifecycle

@@ -3,7 +3,7 @@
     <!-- Image -->
     <div class="featured-image-wrapper">
       <img
-        :src="project.images?.[0] || '/placeholder-project.jpg'"
+        :src="project.images?.[0] || '/portafolio/images/1.png'"
         :alt="project.title"
         class="featured-image"
         @error="handleImageError"
@@ -58,7 +58,7 @@ const props = defineProps({
 })
 
 const handleImageError = (event) => {
-  event.target.src = '/placeholder-project.jpg'
+  event.target.src = '/portafolio/images/1.png'
 }
 
 const truncateDescription = (description, maxLength = 100) => {

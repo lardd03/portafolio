@@ -3,7 +3,7 @@
     <!-- Image Carousel - Mitad superior -->
     <div class="card-image-section">
       <ImageCarousel 
-        :images="project.images || ['/placeholder-project.jpg']"
+        :images="project.images || ['/portafolio/images/1.png']"
         :alt-prefix="project.title"
         :auto-play="false"
       />

@@ -20,7 +20,7 @@
               :style="{ willChange: 'transform' }"
             >
             <!-- Fallback content when image fails to load -->
-            <div class="image-fallback" v-if="!image || image === '/placeholder-project.jpg'">
+            <div class="image-fallback" v-if="!image">
               <i class="bi bi-image"></i>
               <span>{{ altPrefix }}</span>
             </div>
@@ -110,7 +110,7 @@ const goToSlide = (index) => {
 }
 
 const handleImageError = (event) => {
-  event.target.src = '/placeholder-project.jpg'
+  event.target.src = '/portafolio/images/1.png'
 }
 
 const startAutoPlay = () => {

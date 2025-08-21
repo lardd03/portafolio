@@ -19,15 +19,15 @@ export const useProjectsStore = defineStore('projects', {
           complexity: 'Alta'
         },
         images: [
-          '/images/1.png',
-          '/images/2.png',
-          '/images/3.png',
-          '/images/4.png',
-          '/images/5.png',
-          '/images/6.png',
-          '/images/7.png',
-          '/images/8.png',
-          '/images/9.png'
+          '/portafolio/images/1.png',
+          '/portafolio/images/2.png',
+          '/portafolio/images/3.png',
+          '/portafolio/images/4.png',
+          '/portafolio/images/5.png',
+          '/portafolio/images/6.png',
+          '/portafolio/images/7.png',
+          '/portafolio/images/8.png',
+          '/portafolio/images/9.png'
         ],
         demoUrl: null,
         githubUrl: null,
@@ -45,9 +45,9 @@ export const useProjectsStore = defineStore('projects', {
         status: 'completed',
         featured: false,
         images: [
-          '/images/4.png',
-          '/images/1.png',
-          '/images/2.png'
+          '/portafolio/images/4.png',
+          '/portafolio/images/1.png',
+          '/portafolio/images/2.png'
         ],
         demoUrl: null,
         githubUrl: null,
@@ -69,9 +69,9 @@ export const useProjectsStore = defineStore('projects', {
           complexity: 'Muy Alta'
         },
         images: [
-          '/images/3.png',
-          '/images/4.png',
-          '/images/1.png'
+          '/portafolio/images/3.png',
+          '/portafolio/images/4.png',
+          '/portafolio/images/1.png'
         ],
         demoUrl: null,
         githubUrl: null,
@@ -88,9 +88,9 @@ export const useProjectsStore = defineStore('projects', {
         status: 'in-progress',
         featured: false,
         images: [
-          '/images/1.png',
-          '/images/3.png',
-          '/images/4.png'
+          '/portafolio/images/1.png',
+          '/portafolio/images/3.png',
+          '/portafolio/images/4.png'
         ],
         demoUrl: null,
         githubUrl: null,
@@ -107,9 +107,9 @@ export const useProjectsStore = defineStore('projects', {
         status: 'completed',
         featured: false,
         images: [
-          '/images/2.png',
-          '/images/4.png',
-          '/images/1.png'
+          '/portafolio/images/2.png',
+          '/portafolio/images/4.png',
+          '/portafolio/images/1.png'
         ],
         demoUrl: null,
         githubUrl: null,
@@ -126,9 +126,9 @@ export const useProjectsStore = defineStore('projects', {
         status: 'completed',
         featured: true,
         images: [
-          '/images/3.png',
-          '/images/1.png',
-          '/images/2.png'
+          '/portafolio/images/3.png',
+          '/portafolio/images/1.png',
+          '/portafolio/images/2.png'
         ],
         demoUrl: null,
         githubUrl: null,
@@ -145,9 +145,9 @@ export const useProjectsStore = defineStore('projects', {
         status: 'completed',
         featured: false,
         images: [
-          '/images/4.png',
-          '/images/2.png',
-          '/images/3.png'
+          '/portafolio/images/4.png',
+          '/portafolio/images/2.png',
+          '/portafolio/images/3.png'
         ],
         demoUrl: null,
         githubUrl: null,
