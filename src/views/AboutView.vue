@@ -327,10 +327,10 @@ const experienceData = [
     icon: 'laptop'
   },
   {
-    title: 'Estudiante Autodidacta',
-    company: 'Aprendizaje Continuo',
-    date: '2021 - 2022',
-    description: 'Formación intensiva en desarrollo web moderno a través de cursos online y proyectos personales.',
+    title: 'Trainee en Optimización y Automatización de Entornos de Datos',
+    company: 'PolyWorks México',
+    date: '2024 - 2024',
+    description: 'Desarrollo de entornos virtuales para pruebas mediante la replicación de pipelines de datos y la clonación/migración de máquinas virtuales. Diseño de arquitecturas escalables y resilientes para simulaciones de producción. Automatización de validaciones de integridad. Implementación de flujos de ingestión y replicación que optimizan análisis y gestión de datos.',
     technologies: ['JavaScript', 'React', 'Vue.js', 'Git'],
     icon: 'book'
   }
