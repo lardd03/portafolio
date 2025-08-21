@@ -8,9 +8,17 @@ export default defineConfig({
     vue(),
     VueDevTools()
   ],
-  base: '/portafolio/', // Reemplaza 'portafolio' con el nombre exacto de tu repositorio
+  base: '/portafolio/',
   build: {
     outDir: 'dist',
-    assetsDir: 'assets'
+    assetsDir: 'assets',
+    rollupOptions: {
+      output: {
+        manualChunks: undefined
+      }
+    }
+  },
+  define: {
+    __VUE_PROD_HYDRATION_MISMATCH_DETAILS__: false
   }
 })
