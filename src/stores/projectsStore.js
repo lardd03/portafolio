@@ -80,17 +80,18 @@ export const useProjectsStore = defineStore('projects', {
       },
       {
         id: 4,
-        title: 'Sistema de Gestión Desktop',
-        description: 'Aplicación de escritorio para gestión de inventario y ventas',
-        longDescription: 'Sistema completo de gestión empresarial desarrollado con Electron y Vue.js. Incluye gestión de inventario, ventas, clientes y reportes detallados.',
-        technologies: ['Electron', 'Vue.js', 'SQLite', 'JavaScript', 'Node.js'],
-        category: 'desktop',
+        title: 'Sistema de Análisis Predictivo con Machine Learning',
+        description: 'Desarrollo de una solución integral que combina extracción de datos en tiempo real vía API REST, procesamiento automatizado con Python, e implementación de perceptrón multicapa (MLP) para predicción de ventas de combustibles.',
+        longDescription: 'El sistema incluye clasificación inteligente de clientes (registrados vs casuales), análisis de patrones temporales de consumo, y generación automática de visualizaciones interactivas, cuenta con arquitectura modular y ejecución completamente automatizada.El sistema implementa un pipeline ETL robusto que consume datos vía HTTPS desde un API, procesa respuestas JSON complejas y estructura 12 meses de históricos para entrenamiento, con caché inteligente que permite análisis offline. Se desarrolló un perceptrón multicapa (MLP) personalizado para regresión de volúmenes de venta, optimizando métricas MAE. Además, el modelo realiza clasificación multi-nivel de clientes, segmentando automáticamente entre habituales y casuales, y sub-clasificando hábitos de consumo',
+        technologies: ['Python', 'TensorFlow', 'scikit-learn', 'pandas', 'requests', ],
+        category: 'data',
         status: 'in-progress',
         featured: false,
         images: [
-          '/portafolio/images/1.png',
-          '/portafolio/images/3.png',
-          '/portafolio/images/4.png'
+          '/portafolio/images/21.png',
+          '/portafolio/images/22.png',
+          '/portafolio/images/23.png',
+          '/portafolio/images/24.png'
         ],
         demoUrl: null,
         githubUrl: null,
@@ -170,7 +171,7 @@ export const useProjectsStore = defineStore('projects', {
       { id: 'mobile', name: 'Móvil', icon: 'smartphone' },
       { id: 'desktop', name: 'Escritorio', icon: 'monitor' },
       { id: 'api', name: 'API', icon: 'server' },
-      { id: 'other', name: 'Otros', icon: 'folder' }
+      { id: 'data', name: 'Data', icon: 'database' }
     ],
     
     // Tecnologías disponibles

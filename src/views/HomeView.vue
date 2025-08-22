@@ -250,7 +250,7 @@ const skillCategories = [
     name: 'Herramientas',
     icon: 'tools',
     description: 'Optimización de flujos de trabajo, integración continua, despliegue automatizado, virtualización de entornos y pruebas automatizadas.',
-    technologies: ['Git', 'Docker', 'Postman', 'TeamCity', 'Jest', 'Cypress','Hyper-V','Bash y PowerShell','Vmware']
+    technologies: ['Git', 'Docker', 'Postman', 'TeamCity', 'Cypress','Hyper-V','Bash y PowerShell','VMware', 'Jira', 'Confluence', 'Active Directory', 'Terraform', 'Copilot']
   }
 ]
 

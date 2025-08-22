@@ -148,7 +148,8 @@ const getCategoryIcon = (category) => {
     web: 'globe',
     mobile: 'smartphone',
     desktop: 'monitor',
-    api: 'server',
+  api: 'server',
+  data: 'database',
     other: 'folder'
   }
   return icons[category] || 'folder'
@@ -159,7 +160,8 @@ const getCategoryName = (category) => {
     web: 'Web',
     mobile: 'Móvil',
     desktop: 'Escritorio',
-    api: 'API',
+  api: 'API',
+  data: 'Data',
     other: 'Otros'
   }
   return names[category] || 'Otros'

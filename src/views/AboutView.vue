@@ -165,7 +165,7 @@
               Mi <span class="gradient-text">Experiencia</span>
             </h2>
             <p class="section-subtitle text-secondary-custom">
-              Un viaje a través de mi carrera profesional
+                Recorrido por mi trayectoria y lo que he logrado aprender
             </p>
           </div>
         </div>
@@ -280,20 +280,21 @@ const skillsData = [
     skills: [
       { name: 'JavaScript', level: 90 },
       { name: 'Vue.js', level: 85 },
+      { name: 'Angular', level: 75 },
       { name: 'HTML5', level: 95 },
       { name: 'CSS3', level: 90 },
       { name: 'Bootstrap', level: 85 }
     ]
   },
   {
-    category: 'Backend',
+    category: 'Data',
     icon: 'server',
     skills: [
-      { name: 'Node.js', level: 80 },
-      { name: 'Express.js', level: 75 },
-      { name: 'Python', level: 70 },
-      { name: 'PostgreSQL', level: 75 },
-      { name: 'MongoDB', level: 65 }
+      { name: 'Python', level: 80 },
+      { name: 'Pandas', level: 75 },
+      { name: 'NumPy', level: 70 },
+      { name: 'MySQL', level: 85 },
+      { name: 'TensorFlow', level: 65 }
     ]
   },
   {
@@ -302,36 +303,40 @@ const skillsData = [
     skills: [
       { name: 'Git', level: 85 },
       { name: 'VS Code', level: 95 },
-      { name: 'Docker', level: 60 },
-      { name: 'Figma', level: 70 },
-      { name: 'Postman', level: 80 }
+      { name: 'Docker', level: 70 },
+      { name: 'TeamCity', level: 60 },
+      { name: 'ESXi', level: 80 },
+      { name: 'Hyper-V', level: 85 },
+      { name: 'Active Directory', level: 70 },
+
+
     ]
   }
 ]
 
 const experienceData = [
   {
-    title: 'Desarrollador Frontend',
-    company: 'Empresa Ejemplo',
-    date: '2023 - Presente',
-    description: 'Desarrollo de interfaces modernas y responsivas utilizando Vue.js y las mejores prácticas de UX/UI.',
-    technologies: ['Vue.js', 'JavaScript', 'CSS3', 'Bootstrap'],
+    title: 'Coordinador de DevOps y gestión de Datos',
+    company: 'HighFlyJet',
+    date: '2025 - Presente',
+    description: 'Automatización de pipelines para distintas áreas del negocio, con validación de rendimiento mediante Apache JMeter e integración continua en GitHub Actions. Integración de datasets en staging y producción, asegurando calidad y consistencia. Participación en el desarrollo de una red neuronal (MLP) para predicción de ventas con datos históricos, y matrices de confusión, integrada en flujos analíticos para soporte estratégico.',
+    technologies: ['Python', 'Apache JMeter', 'pandas', 'NumPy', 'tensorflow'],
     icon: 'code-square'
   },
   {
-    title: 'Desarrollador Junior',
-    company: 'Startup Tech',
-    date: '2022 - 2023',
-    description: 'Participación en proyectos diversos, desde landing pages hasta aplicaciones web complejas.',
-    technologies: ['HTML5', 'CSS3', 'JavaScript', 'Node.js'],
+    title: 'Desarrollador Web',
+    company: 'Startup HighFlyJet',
+    date: '2023 - 2024',
+    description: 'Participación en el desarrollo de una aplicación web modular en Vue.js para el sector energético, enfocada en la visualización estadística de ventas y métricas. Integré dashboards interactivos con filtros dinámicos, alertas estratégicas y datos en tiempo real para facilitar la toma de decisiones. También trabajé en el control operativo y módulos administrativos. Además, optimicé consultas y estructuré los datos para mejorar el rendimiento y la carga de gráficos.',
+    technologies: ['HTML5', 'CSS3', 'JavaScript', 'Node.js', 'Vue.js', 'Bootstrap', 'Vite'],
     icon: 'laptop'
   },
   {
     title: 'Trainee en Optimización y Automatización de Entornos de Datos',
     company: 'PolyWorks México',
-    date: '2024 - 2024',
-    description: 'Desarrollo de entornos virtuales para pruebas mediante la replicación de pipelines de datos y la clonación/migración de máquinas virtuales. Diseño de arquitecturas escalables y resilientes para simulaciones de producción. Automatización de validaciones de integridad. Implementación de flujos de ingestión y replicación que optimizan análisis y gestión de datos.',
-    technologies: ['JavaScript', 'React', 'Vue.js', 'Git'],
+    date: '2024-2024',
+    description: 'Desarrollo de entornos virtuales para pruebas mediante la replicación de pipelines de datos y la clonación/migración de VMs. Diseño de arquitecturas escalables y resilientes para simulaciones de producción. Automatización de validaciones de integridad e implementación de flujos de ingestión y replicación que optimizan análisis y gestión de datos.',
+    technologies: ['Python', 'Docker', 'Active Directory', 'Git', 'PowerShell', 'VMware', 'ESXi', 'Ansible', 'Terraform', 'Hyper-V'],
     icon: 'book'
   }
 ]
