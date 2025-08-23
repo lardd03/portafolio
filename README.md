@@ -1,6 +1,14 @@
 # 🚀 Mi Portafolio - Vue.js
 
-Un portafolio profesional moderno y responsivo desarrollado con Vue.js 3, Bootstrap 5 y un diseño enfocado en modo oscuro.
+Este portafolio web moderno y responsivo ha sido desarrollado con Vue.js 3, Bootstrap 5 y un diseño centrado en modo oscuro, optimizado para una experiencia fluida en dispositivos móviles y de escritorio.
+
+La arquitectura del proyecto está basada en componentes reutilizables, gestión de estado con Pinia, y un sistema de rutas dinámico que facilita la navegación. Se implementó Vite como herramienta de desarrollo para lograr tiempos de carga rápidos y una configuración eficiente.
+
+Más allá de su función como vitrina visual, este portafolio refleja mi enfoque integral como desarrollador, consultor técnico y data engineer. Aquí presento proyectos que abarcan desde dashboards interactivos para análisis operativo, hasta modelos de machine learning aplicados a predicción de ventas y segmentación de clientes.
+
+También se incluyen ejemplos de automatización DevOps, ETL pipelines, y benchmarking , con énfasis en cómo los datos se transforman en decisiones estratégicas.
+
+Cada sección está diseñada para mostrar no solo el código, sino también la narrativa detrás de cada solución: cómo se pensó, cómo se probó, y qué impacto tuvo.
 
 
 ## 🏗️ Estructura del Proyecto
