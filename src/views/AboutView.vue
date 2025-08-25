@@ -319,7 +319,7 @@ const experienceData = [
     title: 'Coordinador de DevOps y gestión de Datos',
     company: 'HighFlyJet',
     date: '2025 - Presente',
-    description: 'Automatización de pipelines para distintas áreas del negocio, con validación de rendimiento mediante Apache JMeter e integración continua en GitHub Actions. Integración de datasets en staging y producción, asegurando calidad y consistencia. Participación en el desarrollo de una red neuronal (MLP) para predicción de ventas con datos históricos, y matrices de confusión, integrada en flujos analíticos para soporte estratégico.',
+    description: 'Automatización de pipelines para distintas áreas del negocio, con validación de rendimiento mediante Apache JMeter e integración continua en GitHub Actions. Integración de datasets en staging y producción, asegurando calidad y consistencia. Participación en el desarrollo de una red neuronal (MLP) para predicción de ventas con datos históricos, integrada en flujos analíticos para soporte estratégico.',
     technologies: ['Python', 'Apache JMeter', 'pandas', 'NumPy', 'tensorflow'],
     icon: 'code-square'
   },

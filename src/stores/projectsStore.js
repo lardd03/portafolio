@@ -62,7 +62,7 @@ export const useProjectsStore = defineStore('projects', {
         technologies: ['React', 'TypeScript', 'D3.js', 'Chart.js', 'Python', 'FastAPI', 'PostgreSQL', 'Redis', 'Apache Kafka'],
         category: 'web',
         status: 'completed',
-        featured: true,
+        featured: false,
         stats: {
           duration: '10 meses',
           teamSize: '8',
@@ -86,7 +86,7 @@ export const useProjectsStore = defineStore('projects', {
         technologies: ['Python', 'TensorFlow', 'scikit-learn', 'pandas', 'requests', ],
         category: 'data',
         status: 'in-progress',
-        featured: false,
+        featured: true,
         images: [
           '/portafolio/images/21.png',
           '/portafolio/images/22.png',
@@ -119,22 +119,28 @@ export const useProjectsStore = defineStore('projects', {
       },
       {
         id: 6,
-        title: 'Microservicio de Notificaciones',
-        description: 'Servicio de notificaciones en tiempo real con múltiples canales',
-        longDescription: 'Microservicio desarrollado con Node.js para envío de notificaciones multi-canal (email, SMS, push). Incluye cola de mensajes, plantillas y analytics.',
-        technologies: ['Node.js', 'Express', 'Redis', 'RabbitMQ', 'SendGrid', 'Firebase'],
-        category: 'api',
+        title: 'Modulo de Precios de Competencias',
+        description: 'Este módulo permite visualizar precios de productos en estaciones competidoras cercanas, extraídos de fuentes oficiales. Facilita la comparación estratégica con tus propios precios, ayudando a ajustar la competitividad sin comprometer la utilidad. Incluye actualizaciones automáticas y simulaciones gráficas para análisis dinámico.',
+        longDescription: 'Nos facilita comparar precios de combustibles entre estaciones cercanas usando datos oficiales, actualizados automáticamente varias veces al día. Al detectar cambios, se actualiza la información y se habilita un análisis estadístico basado en historial de ventas, lo que facilita ajustar precios estratégicamente sin comprometer la utilidad. Incluye un simulador gráfico con códigos de color para visualizar el impacto de cada ajuste en la rentabilidad. Está desarrollado con tecnologías como Vue.js, Bootstrap 5, Chart.js, y ETL pipelines automatizados, integrando fuentes externas mediante APIs para mantener la información vigente.',
+        technologies: ['Node.js', 'Express', 'MySQL', 'RabbitMQ', 'JavaScript', 'Vue.js', 'Tailwind CSS',],
+        category: 'web',
         status: 'completed',
         featured: true,
         images: [
-          '/portafolio/images/3.png',
-          '/portafolio/images/1.png',
-          '/portafolio/images/2.png'
+          '/portafolio/images/31.png',
+          '/portafolio/images/32.png',
+          '/portafolio/images/37.png',
+          '/portafolio/images/38.png',
+          '/portafolio/images/33.png',
+          '/portafolio/images/34.png',
+          '/portafolio/images/35.png',
+          '/portafolio/images/36.png',
+          '/portafolio/images/39.png'
         ],
         demoUrl: null,
         githubUrl: null,
-        createdAt: '2024-07-10',
-        updatedAt: '2024-08-05'
+        createdAt: '2025-02-01',
+        updatedAt: '2025-05-25'
       },
       {
         id: 7,

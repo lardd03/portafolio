@@ -82,18 +82,18 @@
               <div class="social-links mt-5">
                 <h5 class="social-title mb-3">Sígueme en</h5>
                 <div class="social-buttons">
-                  <a
-                    v-for="(url, platform) in personalInfo.socialLinks"
-                    :key="platform"
-                    :href="url"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="social-button"
-                    v-if="url"
-                    :title="`Sígueme en ${platform}`"
-                  >
-                    <i :class="`bi bi-${getSocialIcon(platform)}`"></i>
-                  </a>
+                  <template v-for="(url, platform) in personalInfo.socialLinks" :key="platform">
+                    <a
+                      v-if="url"
+                      :href="url"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="social-button"
+                      :title="`Sígueme en ${platform}`"
+                    >
+                      <i :class="`bi bi-${getSocialIcon(platform)}`"></i>
+                    </a>
+                  </template>
                 </div>
               </div>
             </div>
@@ -272,8 +272,16 @@
 <script setup>
 import { ref, reactive, computed, onMounted } from 'vue'
 import { useMainStore } from '../stores/mainStore'
+import emailjs from '@emailjs/browser'
 
 const mainStore = useMainStore()
+
+// Configuración de EmailJS (obtener de emailjs.com)
+const EMAILJS_CONFIG = {
+  publicKey: 'NH69SK35f1RWotijS', // Reemplazar con tu Public Key
+  serviceId: 'service_l7tpa98', // Reemplazar con tu Service ID
+  templateId: 'template_fot0f7a' // Reemplazar con tu Template ID
+}
 
 // Reactive data
 const form = reactive({
@@ -365,11 +373,33 @@ const submitForm = async () => {
   submitMessage.value = null
 
   try {
-    // Aquí se implementaría la lógica para enviar el formulario
-    // Por ahora simulamos el envío
-    await new Promise(resolve => setTimeout(resolve, 2000))
+    // Preparar los parámetros para EmailJS
+    const templateParams = {
+      name: form.name, // Cambiado de from_name a name para coincidir con el template
+      email: form.email, // Email del remitente
+      subject: form.subject, // Asunto del mensaje
+      message: form.message, // Mensaje principal
+      time: new Date().toLocaleString('es-ES', { 
+        timeZone: 'America/Mexico_City',
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric',
+        hour: '2-digit',
+        minute: '2-digit'
+      }), // Fecha y hora formateada
+      reply_to: form.email // Para poder responder
+    }
 
-    // Simular éxito
+    // Enviar email usando EmailJS
+    const response = await emailjs.send(
+      EMAILJS_CONFIG.serviceId,
+      EMAILJS_CONFIG.templateId,
+      templateParams,
+      EMAILJS_CONFIG.publicKey
+    )
+
+    console.log('Email enviado exitosamente:', response)
+
     submitMessage.value = {
       type: 'success',
       text: '¡Mensaje enviado correctamente! Te responderé lo antes posible.'
@@ -381,9 +411,22 @@ const submitForm = async () => {
     })
 
   } catch (error) {
+    console.error('Error al enviar email:', error)
+    
+    let errorMessage = 'Error al enviar el mensaje. Por favor, intenta nuevamente.'
+    
+    // Manejo de errores específicos de EmailJS
+    if (error.status === 400) {
+      errorMessage = 'Error en los datos del formulario. Verifica la información.'
+    } else if (error.status === 402) {
+      errorMessage = 'Límite de emails excedido. Intenta más tarde.'
+    } else if (error.status === 403) {
+      errorMessage = 'Servicio no disponible temporalmente.'
+    }
+
     submitMessage.value = {
       type: 'error',
-      text: 'Error al enviar el mensaje. Por favor, intenta nuevamente.'
+      text: errorMessage
     }
   } finally {
     isSubmitting.value = false

@@ -10,16 +10,16 @@ export const useMainStore = defineStore('main', {
     // Información personal (se llenará posteriormente)
     personalInfo: {
       name: 'Juan Carlos Mejia Arguello',
-      title: '',
-      description: '',
+      title: 'Desarrollador Web y Data Engineer',
+      description: 'Desarrollador apasionado por crear soluciones tecnológicas innovadoras',
       email: 'mejiaarguellojuancarlos@gmail.com',
-      phone: '',
-      location: '',
-      avatar: '',
+      phone: '+52 2212557982',
+      location: 'México',
+      avatar: '/placeholder-avatar.jpg',
       socialLinks: {
-        github: '',
-        linkedin: '',
-        twitter: '',
+        github: 'https://github.com/juancarlos2100',
+        linkedin: 'https://www.linkedin.com/in/juan-carlos-mejia-arguello-25b457267/',
+        twitter: 'https://twitter.com/juancarlosme',
         portfolio: ''
       }
     },
