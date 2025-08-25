@@ -276,11 +276,20 @@ import emailjs from '@emailjs/browser'
 
 const mainStore = useMainStore()
 
-// Configuración de EmailJS (obtener de emailjs.com)
+// Configuración de EmailJS usando variables de entorno
 const EMAILJS_CONFIG = {
-  publicKey: 'NH69SK35f1RWotijS', // Reemplazar con tu Public Key
-  serviceId: 'service_l7tpa98', // Reemplazar con tu Service ID
-  templateId: 'template_fot0f7a' // Reemplazar con tu Template ID
+  publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
+  serviceId: import.meta.env.VITE_EMAILJS_SERVICE_ID,
+  templateId: import.meta.env.VITE_EMAILJS_TEMPLATE_ID
+}
+
+// Validar que las variables de entorno estén configuradas
+if (!EMAILJS_CONFIG.publicKey || !EMAILJS_CONFIG.serviceId || !EMAILJS_CONFIG.templateId) {
+  console.error('❌ Error: Variables de entorno de EmailJS no configuradas')
+  console.log('📝 Asegúrate de crear un archivo .env con:')
+  console.log('VITE_EMAILJS_PUBLIC_KEY=tu_public_key')
+  console.log('VITE_EMAILJS_SERVICE_ID=tu_service_id') 
+  console.log('VITE_EMAILJS_TEMPLATE_ID=tu_template_id')
 }
 
 // Reactive data
