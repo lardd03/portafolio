@@ -375,10 +375,10 @@ const submitForm = async () => {
   try {
     // Preparar los parámetros para EmailJS
     const templateParams = {
-      name: form.name, // Cambiado de from_name a name para coincidir con el template
-      email: form.email, // Email del remitente
-      subject: form.subject, // Asunto del mensaje
-      message: form.message, // Mensaje principal
+      name: form.name,
+      email: form.email, // Email del remitente para mostrar
+      subject: form.subject,
+      message: form.message,
       time: new Date().toLocaleString('es-ES', { 
         timeZone: 'America/Mexico_City',
         year: 'numeric',
@@ -386,8 +386,9 @@ const submitForm = async () => {
         day: 'numeric',
         hour: '2-digit',
         minute: '2-digit'
-      }), // Fecha y hora formateada
-      reply_to: form.email // Para poder responder
+      }),
+      reply_to: form.email, // Email para responder (MUY IMPORTANTE)
+      to_email: 'mejiaarguellojuancarlos@gmail.com' // Tu email (opcional)
     }
 
     // Enviar email usando EmailJS
