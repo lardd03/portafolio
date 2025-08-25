@@ -148,8 +148,9 @@ const getCategoryIcon = (category) => {
     web: 'globe',
     mobile: 'smartphone',
     desktop: 'monitor',
-  api: 'server',
-  data: 'database',
+    api: 'server',
+    data: 'database',
+    devops: 'cloud',
     other: 'folder'
   }
   return icons[category] || 'folder'
@@ -160,8 +161,9 @@ const getCategoryName = (category) => {
     web: 'Web',
     mobile: 'Móvil',
     desktop: 'Escritorio',
-  api: 'API',
-  data: 'Data',
+    api: 'API',
+    data: 'Data',
+    devops: 'DevOps',
     other: 'Otros'
   }
   return names[category] || 'Otros'

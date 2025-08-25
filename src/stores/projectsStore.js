@@ -36,47 +36,30 @@ export const useProjectsStore = defineStore('projects', {
       },
 
       {
-        id: 2,
-        title: 'API REST con Python',
-        description: 'API RESTful para gestión de usuarios y autenticación JWT',
-        longDescription: 'API REST desarrollada con FastAPI y Python que proporciona endpoints para gestión de usuarios, autenticación JWT, validación de datos y documentación automática con Swagger.',
-        technologies: ['Python', 'FastAPI', 'PostgreSQL', 'JWT', 'Docker', 'Swagger'],
-        category: 'api',
-        status: 'completed',
-        featured: false,
-        images: [
-          '/portafolio/images/4.png',
-          '/portafolio/images/1.png',
-          '/portafolio/images/2.png'
-        ],
-        demoUrl: null,
-        githubUrl: null,
-        createdAt: '2024-03-05',
-        updatedAt: '2024-04-12'
-      },
-      {
         id: 3,
-        title: 'Dashboard de Analytics Empresarial',
-        description: 'Plataforma de visualización de datos empresariales con métricas en tiempo real, reportes automatizados y análisis predictivo.',
-        longDescription: 'Desarrollo de una plataforma completa de business intelligence para una empresa de retail. El dashboard integra datos de múltiples fuentes (ventas, inventario, marketing, finanzas) y presenta visualizaciones interactivas en tiempo real. Incluye alertas automáticas, reportes programables, análisis de tendencias, predicciones basadas en ML, y exportación de datos en múltiples formatos. La plataforma procesa más de 1 millón de registros diarios.',
-        technologies: ['React', 'TypeScript', 'D3.js', 'Chart.js', 'Python', 'FastAPI', 'PostgreSQL', 'Redis', 'Apache Kafka'],
-        category: 'web',
+        title: 'Juego de Domino con Heurísticas',
+        description: 'Juego de dominó interactivo desarrollado en Python con interfaz gráfica en Tkinter. El jugador compite contra un sistema automatizado que utiliza heurísticas estratégicas para seleccionar jugadas óptimas, evaluando factores como fichas dobles, valores bajos y opciones futuras. El proyecto combina lógica de juego clásica con inteligencia artificial básica para ofrecer una experiencia desafiante y visualmente funcional',
+        longDescription: 'Este proyecto consiste en el desarrollo de un juego de dominó clásico implementado en Python, utilizando la biblioteca Tkinter para construir una interfaz gráfica intuitiva y funcional. El usuario puede seleccionar fichas desde su mano y colocarlas en el tablero mediante interacción directa con la ventana, mientras compite contra un oponente automatizado controlado por el sistema. La lógica del sistema se basa en una heurística personalizada que asigna puntuaciones a cada jugada posible, considerando criterios como: jugar fichas dobles, priorizar fichas de menor valor, maximizar las opciones futuras del sistema, evitar jugadas que favorezcan al jugador, y analizar la frecuencia de aparición de cada número en las fichas restantes. Esta heurística permite que el sistema tome decisiones estratégicas, haciendo que el juego sea difícil de ganar pero no imposible, fomentando una experiencia competitiva y estimulante.',
+        technologies: ['Python', 'Django', 'Tkinter', 'Pandas'],
+        category: 'desktop',
         status: 'completed',
         featured: false,
         stats: {
-          duration: '10 meses',
-          teamSize: '8',
+          duration: '1 mes',
+          teamSize: '2',
           complexity: 'Muy Alta'
         },
         images: [
-          '/portafolio/images/3.png',
-          '/portafolio/images/4.png',
-          '/portafolio/images/1.png'
+          '/portafolio/images/52.png',
+          '/portafolio/images/53.png',
+          '/portafolio/images/54.png',
+          '/portafolio/images/55.png',
+          '/portafolio/images/51.png',
         ],
         demoUrl: null,
         githubUrl: null,
-        createdAt: '2024-04-20',
-        updatedAt: '2024-06-30'
+        createdAt: '2023-05-20',
+        updatedAt: '2023-06-30'
       },
       {
         id: 4,
@@ -100,17 +83,19 @@ export const useProjectsStore = defineStore('projects', {
       },
       {
         id: 5,
-        title: 'Blog Personal',
-        description: 'Blog personal con CMS personalizado y optimización SEO',
-        longDescription: 'Blog personal desarrollado con Next.js que incluye sistema de gestión de contenido personalizado, optimización SEO, comentarios y newsletter.',
-        technologies: ['Next.js', 'React', 'Tailwind CSS', 'Prisma', 'PostgreSQL', 'Vercel'],
-        category: 'web',
+        title: 'Automatización de la creación de entornos de Despliegue y Pruebas con VMs',
+        description: 'Sistema automatizado para la creación, migración y clonación de máquinas virtuales Windows 10 y 11, gestionadas remotamente vía SSH o WinRM, con credenciales asignadas por Active Directory y scripts de PowerShell que permiten configuraciones desatendidas en menos de 10 minutos.',
+        longDescription: 'Este sistema integral permite la automatización completa del ciclo de vida de máquinas virtuales Windows 10 y 11, optimizado para entornos de pruebas, despliegue y administración remota. Mediante scripts de PowerShell interactivos, el usuario puede definir parámetros clave como memoria RAM, espacio en disco y sistema operativo, facilitando la creación de nuevas VMs, la migración de instancias existentes con datos persistentes, o la clonación de entornos completos con identificadores únicos para evitar conflictos de red. La infraestructura se apoya en tecnologías como Hyper-V y VMware, permitiendo flexibilidad según el entorno de ejecución. La gestión remota se realiza vía SSH o WinRM, mientras que Active Directory se encarga de la asignación de credenciales, políticas de acceso y software preinstalado, asegurando que cada VM esté lista para operar en menos de 10 minutos gracias a una instalación desatendida. Este sistema no solo acelera el despliegue, sino que estandariza la configuración, mejora la trazabilidad y facilita la administración centralizada de entornos virtuales en escenarios empresariales o de desarrollo avanzado.',
+        technologies: ['Terraform', 'Docker', 'VMware', 'SSH', 'Hyper-V', 'WinRM', 'PowerShell', 'Active Directory'],
+        category: 'devops',
         status: 'completed',
         featured: false,
         images: [
-          '/portafolio/images/2.png',
-          '/portafolio/images/4.png',
-          '/portafolio/images/1.png'
+          '/portafolio/images/41.png',
+          '/portafolio/images/42.png',
+          '/portafolio/images/43.png',
+          '/portafolio/images/44.png',
+          '/portafolio/images/46.png'
         ],
         demoUrl: null,
         githubUrl: null,
@@ -142,30 +127,12 @@ export const useProjectsStore = defineStore('projects', {
         createdAt: '2025-02-01',
         updatedAt: '2025-05-25'
       },
-      {
-        id: 7,
-        title: 'Juego Web Interactivo',
-        description: 'Juego de puzzle desarrollado con Canvas y JavaScript vanilla',
-        longDescription: 'Juego de rompecabezas interactivo desarrollado con JavaScript vanilla y Canvas API. Incluye múltiples niveles, sistema de puntuación y almacenamiento local.',
-        technologies: ['JavaScript', 'HTML5 Canvas', 'CSS3', 'Local Storage'],
-        category: 'web',
-        status: 'completed',
-        featured: false,
-        images: [
-          '/portafolio/images/4.png',
-          '/portafolio/images/2.png',
-          '/portafolio/images/3.png'
-        ],
-        demoUrl: null,
-        githubUrl: null,
-        createdAt: '2024-01-30',
-        updatedAt: '2024-02-20'
-      }
+
     ],
     
     // Filtros y configuración
     filters: {
-      category: 'all', // all, web, mobile, desktop, api
+      category: 'all', // all, web, mobile, desktop, api, data, devops
       technology: 'all',
       status: 'all'
     },
@@ -177,7 +144,8 @@ export const useProjectsStore = defineStore('projects', {
       { id: 'mobile', name: 'Móvil', icon: 'smartphone' },
       { id: 'desktop', name: 'Escritorio', icon: 'monitor' },
       { id: 'api', name: 'API', icon: 'server' },
-      { id: 'data', name: 'Data', icon: 'database' }
+      { id: 'data', name: 'Data', icon: 'database' },
+      { id: 'devops', name: 'DevOps', icon: 'settings' }
     ],
     
     // Tecnologías disponibles

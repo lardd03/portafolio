@@ -261,7 +261,7 @@
 <script setup>
 import { computed, onMounted } from 'vue'
 import { useMainStore } from '../stores/mainStore'
-import akazaImage from '../assets/images/akaza.jpg'
+import akazaImage from '../assets/images/15.jpg'
 
 const mainStore = useMainStore()
 

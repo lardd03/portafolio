@@ -107,8 +107,8 @@
             <h2 class="section-title">
               Proyectos <span class="gradient-text">Destacados</span>
             </h2>
-            <p class="section-subtitle text-secondary-custom">
-              Una muestra de mi trabajo más reciente y significativo
+            <p class="text-muted-custom">
+              Más allá de su función como vitrina visual, este portafolio refleja mi enfoque integral como desarrollador, consultor técnico y data engineer. Aquí presento proyectos que abarcan desde dashboards interactivos para análisis operativo, hasta modelos de machine learning aplicados a predicción de ventas y segmentación de clientes. También se incluyen ejemplos de automatización DevOps, ETL pipelines, y benchmarking , con énfasis en cómo los datos se transforman en decisiones estratégicas.
             </p>
           </div>
         </div>
@@ -216,7 +216,7 @@ import { computed, onMounted } from 'vue'
 import { useMainStore } from '../stores/mainStore'
 import { useProjectsStore } from '../stores/projectsStore'
 import FeaturedProjectCard from '../components/FeaturedProjectCard.vue'
-import akazaImage from '../assets/images/akaza.jpg'
+import akazaImage from '../assets/images/15.jpg'
 
 const mainStore = useMainStore()
 const projectsStore = useProjectsStore()

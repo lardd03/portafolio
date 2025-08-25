@@ -1,6 +1,3 @@
-// Ejemplo de implementación con Formspree
-// Solo necesitas cambiar la action del formulario
-
 const submitFormWithFormspree = async (formData) => {
   try {
     const response = await fetch('https://formspree.io/f/TU_FORM_ID', {
@@ -26,9 +23,3 @@ const submitFormWithFormspree = async (formData) => {
   }
 }
 
-// Para usar Formspree:
-// 1. Regístrate en https://formspree.io/
-// 2. Crea un nuevo formulario
-// 3. Obtén tu Form ID
-// 4. Reemplaza TU_FORM_ID con tu ID real
-// 5. Usa esta función en lugar de EmailJS

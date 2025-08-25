@@ -74,6 +74,8 @@ const getCategoryIcon = (category) => {
     mobile: 'smartphone',
     desktop: 'monitor',
     api: 'server',
+    data: 'database',
+    devops: 'cloud',
     other: 'folder'
   }
   return icons[category] || 'folder'
@@ -85,6 +87,8 @@ const getCategoryName = (category) => {
     mobile: 'Móvil',
     desktop: 'Escritorio',
     api: 'API',
+    data: 'Data',
+    devops: 'Cloud',
     other: 'Otros'
   }
   return names[category] || 'Otros'
