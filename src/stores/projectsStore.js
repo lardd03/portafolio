@@ -66,7 +66,7 @@ export const useProjectsStore = defineStore('projects', {
         title: 'Sistema de Análisis Predictivo con Machine Learning',
         description: 'Desarrollo de una solución integral que combina extracción de datos en tiempo real vía API REST, procesamiento automatizado con Python, e implementación de perceptrón multicapa (MLP) para predicción de ventas de combustibles.',
         longDescription: 'El sistema incluye clasificación inteligente de clientes (registrados vs casuales), análisis de patrones temporales de consumo, y generación automática de visualizaciones interactivas, cuenta con arquitectura modular y ejecución completamente automatizada.El sistema implementa un pipeline ETL robusto que consume datos vía HTTPS desde un API, procesa respuestas JSON complejas y estructura 12 meses de históricos para entrenamiento, con caché inteligente que permite análisis offline. Se desarrolló un perceptrón multicapa (MLP) personalizado para regresión de volúmenes de venta, optimizando métricas MAE. Además, el modelo realiza clasificación multi-nivel de clientes, segmentando automáticamente entre habituales y casuales, y sub-clasificando hábitos de consumo',
-        technologies: ['Python', 'TensorFlow', 'scikit-learn', 'pandas', 'requests', ],
+        technologies: ['Python', 'TensorFlow', 'scikit-learn', 'pandas', 'requests',],
         category: 'data',
         status: 'in-progress',
         featured: true,
@@ -127,16 +127,40 @@ export const useProjectsStore = defineStore('projects', {
         createdAt: '2025-02-01',
         updatedAt: '2025-05-25'
       },
-
+      {
+        id: 7,
+        title: 'Sistema de Gestión de Asistencia y Nómina',
+        description: 'Este sistema de gestión de asistencia y nómina es una solución empresarial robusta desarrollada con Vue 3, Vite y Pinia, diseñada para optimizar la administración de capital humano. Su arquitectura modular permite un control preciso de registros mediante un sistema de permisos avanzado y una gestión de estados centralizada. Destaca por su potente módulo de analítica, que convierte datos de asistencia en tableros visuales dinámicos de puntualidad y productividad por estaciones de trabajo.',
+        longDescription: 'La plataforma automatiza el flujo completo de nóminas, desde la validación de horas hasta la generación de reportes profesionales en PDF. Con una interfaz reactiva y estilizada mediante SCSS y Bootstrap, garantiza una experiencia de usuario fluida y profesional en cualquier dispositivo. Este proyecto demuestra una implementación técnica impecable de lógica de negocio compleja, escalabilidad y visualización de datos, posicionándose como una herramienta estratégica para la digitalización de procesos administrativos y la toma de decisiones basada en información en tiempo real. Es el ejemplo perfecto de cómo el desarrollo moderno puede transformar la gestión operativa en una ventaja competitiva.',
+        technologies: ['Vue 3', 'Vite', 'Pinia', 'SCSS', 'Bootstrap'],
+        category: 'web',
+        status: 'completed',
+        featured: true,
+        images: [
+          '/portafolio/images/56.png',
+          '/portafolio/images/57.png',
+          '/portafolio/images/58.png',
+          '/portafolio/images/59.png',
+          '/portafolio/images/60.png',
+          '/portafolio/images/61.png',
+          '/portafolio/images/62.png',
+          '/portafolio/images/63.png',
+          '/portafolio/images/64.png'
+        ],
+        demoUrl: null,
+        githubUrl: null,
+        createdAt: '2026-03-04',
+        updatedAt: '2026-03-04'
+      }
     ],
-    
+
     // Filtros y configuración
     filters: {
       category: 'all', // all, web, mobile, desktop, api, data, devops
       technology: 'all',
       status: 'all'
     },
-    
+
     // Categorías disponibles
     categories: [
       { id: 'all', name: 'Todos', icon: 'grid' },
@@ -147,7 +171,7 @@ export const useProjectsStore = defineStore('projects', {
       { id: 'data', name: 'Data', icon: 'database' },
       { id: 'devops', name: 'DevOps', icon: 'settings' }
     ],
-    
+
     // Tecnologías disponibles
     availableTechnologies: [
       'JavaScript', 'TypeScript', 'Vue.js', 'React', 'Angular',
@@ -157,7 +181,7 @@ export const useProjectsStore = defineStore('projects', {
       'HTML5', 'CSS3', 'SASS', 'Bootstrap', 'Tailwind CSS',
       'Git', 'Docker', 'AWS', 'Firebase', 'Vercel'
     ],
-    
+
     // Estado de la interfaz
     ui: {
       selectedProject: null,
@@ -173,61 +197,61 @@ export const useProjectsStore = defineStore('projects', {
     // Getter para obtener proyectos filtrados
     filteredProjects: (state) => {
       let filtered = [...state.projects]
-      
+
       // Filtrar por búsqueda
       if (state.ui.searchQuery) {
         const query = state.ui.searchQuery.toLowerCase()
-        filtered = filtered.filter(project => 
+        filtered = filtered.filter(project =>
           project.title.toLowerCase().includes(query) ||
           project.description.toLowerCase().includes(query) ||
           project.technologies.some(tech => tech.toLowerCase().includes(query))
         )
       }
-      
+
       // Filtrar por categoría
       if (state.filters.category !== 'all') {
         filtered = filtered.filter(project => project.category === state.filters.category)
       }
-      
+
       // Filtrar por tecnología
       if (state.filters.technology !== 'all') {
-        filtered = filtered.filter(project => 
+        filtered = filtered.filter(project =>
           project.technologies.includes(state.filters.technology)
         )
       }
-      
+
       // Filtrar por estado
       if (state.filters.status !== 'all') {
         filtered = filtered.filter(project => project.status === state.filters.status)
       }
-      
+
       // Ordenar
       filtered.sort((a, b) => {
         const aValue = a[state.ui.sortBy]
         const bValue = b[state.ui.sortBy]
-        
+
         if (state.ui.sortOrder === 'asc') {
           return aValue > bValue ? 1 : -1
         } else {
           return aValue < bValue ? 1 : -1
         }
       })
-      
+
       return filtered
     },
-    
+
     // Getter para obtener proyectos destacados
     featuredProjects: (state) => {
       return state.projects.filter(project => project.featured)
     },
-    
+
     // Getter para obtener estadísticas de proyectos
     projectStats: (state) => {
       const total = state.projects.length
       const completed = state.projects.filter(p => p.status === 'completed').length
       const inProgress = state.projects.filter(p => p.status === 'in-progress').length
       const technologies = [...new Set(state.projects.flatMap(p => p.technologies))].length
-      
+
       return {
         total,
         completed,
@@ -235,7 +259,7 @@ export const useProjectsStore = defineStore('projects', {
         technologies
       }
     },
-    
+
     // Getter para obtener proyecto por ID
     getProjectById: (state) => {
       return (id) => state.projects.find(project => project.id === id)
@@ -255,7 +279,7 @@ export const useProjectsStore = defineStore('projects', {
       }
       this.projects.push(newProject)
     },
-    
+
     // Acción para actualizar un proyecto
     updateProject(id, updates) {
       const index = this.projects.findIndex(p => p.id === id)
@@ -267,7 +291,7 @@ export const useProjectsStore = defineStore('projects', {
         }
       }
     },
-    
+
     // Acción para eliminar un proyecto
     deleteProject(id) {
       const index = this.projects.findIndex(p => p.id === id)
@@ -275,12 +299,12 @@ export const useProjectsStore = defineStore('projects', {
         this.projects.splice(index, 1)
       }
     },
-    
+
     // Acción para cambiar filtros
     setFilter(filterType, value) {
       this.filters[filterType] = value
     },
-    
+
     // Acción para limpiar todos los filtros
     clearFilters() {
       this.filters = {
@@ -290,33 +314,33 @@ export const useProjectsStore = defineStore('projects', {
       }
       this.ui.searchQuery = ''
     },
-    
+
     // Acción para establecer búsqueda
     setSearchQuery(query) {
       this.ui.searchQuery = query
     },
-    
+
     // Acción para cambiar ordenamiento
     setSorting(sortBy, sortOrder = 'desc') {
       this.ui.sortBy = sortBy
       this.ui.sortOrder = sortOrder
     },
-    
+
     // Acción para seleccionar proyecto
     selectProject(project) {
       this.ui.selectedProject = project
     },
-    
+
     // Acción para mostrar/ocultar modal de proyecto
     toggleProjectModal(show = null) {
       this.ui.showProjectModal = show !== null ? show : !this.ui.showProjectModal
     },
-    
+
     // Acción para establecer loading
     setLoading(status) {
       this.ui.isLoading = status
     },
-    
+
     // Acción para cargar proyectos (simulada - en el futuro se conectará a una API)
     async loadProjects() {
       this.setLoading(true)
@@ -324,10 +348,10 @@ export const useProjectsStore = defineStore('projects', {
         // Aquí se haría la llamada a la API
         // const response = await api.getProjects()
         // this.projects = response.data
-        
+
         // Por ahora, simular carga
         await new Promise(resolve => setTimeout(resolve, 1000))
-        
+
         this.setLoading(false)
       } catch (error) {
         console.error('Error loading projects:', error)
