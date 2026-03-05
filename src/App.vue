@@ -24,12 +24,7 @@
     <FooterComponent />
 
     <!-- Scroll to Top Button -->
-    <button
-      v-if="showScrollTop"
-      @click="scrollToTop"
-      class="scroll-top-btn"
-      aria-label="Volver arriba"
-    >
+    <button v-if="showScrollTop" @click="scrollToTop" class="scroll-top-btn" aria-label="Volver arriba">
       <i class="bi bi-arrow-up"></i>
     </button>
   </div>
@@ -62,11 +57,11 @@ const scrollToTop = () => {
 // Lifecycle hooks
 onMounted(() => {
   window.addEventListener('scroll', handleScroll)
-  
+
   // Configurar información personal por defecto (se puede personalizar después)
   mainStore.updatePersonalInfo({
     name: 'Juan Carlos Mejia Arguello',
-    title: 'Analista de Datos, Desarrollador y Software Tester',
+    title: 'Ingeniero en Ciencias de la Computación',
     description: 'Apasionado por sumergirse en las minucias de los datos, crear experiencias digitales intuitivas y asegurar la calidad del software.',
     email: 'mejiaarguellojuancarlos@gmail.com',
     location: 'Puebla de Zaragoza, México',
@@ -92,7 +87,8 @@ onUnmounted(() => {
 
 .main-content {
   flex: 1;
-  padding-top: 70px; /* Espacio para navbar fijo */
+  padding-top: 70px;
+  /* Espacio para navbar fijo */
 }
 
 /* Loading Global */
@@ -168,7 +164,7 @@ onUnmounted(() => {
   .main-content {
     padding-top: 60px;
   }
-  
+
   .scroll-top-btn {
     bottom: 1rem;
     right: 1rem;
@@ -180,15 +176,16 @@ onUnmounted(() => {
 
 /* Accessibility */
 @media (prefers-reduced-motion: reduce) {
+
   .page-enter-active,
   .page-leave-active {
     transition: none;
   }
-  
+
   .scroll-top-btn {
     transition: none;
   }
-  
+
   .scroll-top-btn:hover {
     transform: none;
   }
@@ -196,11 +193,12 @@ onUnmounted(() => {
 
 /* Print Styles */
 @media print {
+
   .scroll-top-btn,
   .global-loading {
     display: none !important;
   }
-  
+
   .main-content {
     padding-top: 0;
   }

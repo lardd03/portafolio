@@ -165,7 +165,7 @@
               Mi <span class="gradient-text">Experiencia</span>
             </h2>
             <p class="section-subtitle text-secondary-custom">
-                Recorrido por mi trayectoria y lo que he logrado aprender
+              Recorrido por mi trayectoria y lo que he logrado aprender
             </p>
           </div>
         </div>
@@ -246,7 +246,7 @@
                 <i class="bi bi-chat-dots me-2"></i>
                 Contactar
               </router-link>
-<!--               <a href="/cv.pdf" target="_blank" class="btn btn-outline-custom btn-lg" download>
+              <!--               <a href="/cv.pdf" target="_blank" class="btn btn-outline-custom btn-lg" download>
                 <i class="bi bi-download me-2"></i>
                 Descargar CV
               </a> -->
@@ -316,12 +316,12 @@ const skillsData = [
 
 const experienceData = [
   {
-    title: 'Coordinador de DevOps y gestión de Datos',
+    title: 'Software Development Engineer (PWA & UX Focus)',
     company: 'HighFlyJet',
     date: '2025 - Presente',
-    description: 'Automatización de pipelines para distintas áreas del negocio, con validación de rendimiento mediante Apache JMeter e integración continua en GitHub Actions. Integración de datasets en staging y producción, asegurando calidad y consistencia. Participación en el desarrollo de una red neuronal (MLP) para predicción de ventas con datos históricos, integrada en flujos analíticos para soporte estratégico.',
-    technologies: ['Python', 'Apache JMeter', 'pandas', 'NumPy', 'tensorflow'],
-    icon: 'code-square'
+    description: 'Ingeniero de Software especializado en el desarrollo de soluciones web de alto rendimiento y diseño centrado en el usuario. Lidero la optimización de sistemas mediante validación de rendimiento (JMeter) y el despliegue de arquitecturas modernas bajo estándares PWA. Especialista en la resolución ágil y puntual de incidencias en módulos de software mediante el uso avanzado de AI Prompting, optimizando los tiempos de respuesta ante fallos críticos. Transformo lógica compleja en herramientas analíticas visuales e intuitivas, garantizando experiencias digitales escalables, fluidas y orientadas a la excelencia en la interacción.',
+    technologies: ['Vue.js', 'AI Prompting', 'PWA', 'SCSS', 'GitHub Actions', 'Apache JMeter', 'Python'],
+    icon: 'window-stack'
   },
   {
     title: 'Desarrollador Web',

@@ -151,6 +151,29 @@ export const useProjectsStore = defineStore('projects', {
         githubUrl: null,
         createdAt: '2026-03-04',
         updatedAt: '2026-03-04'
+      },
+      {
+        id: 8,
+        title: 'Módulo Validador JSON',
+        description: 'El módulo Validador JSON es una herramienta web diseñada para auditar y analizar reportes mensuales de almacenamiento de hidrocarburos. Utiliza JavaScript, Node.js y librerías de visualización (Chart.js, DataTables) para procesar y mostrar datos. Su diseño combina una interfaz intuitiva con carga de archivos mediante drag & drop y vista previa estructurada. Genera un dashboard analítico con volúmenes, ingresos y eventos, además de detectar inconsistencias críticas y advertencias.',
+        longDescription: 'El módulo Validador JSON es una aplicación web enfocada en la validación y análisis de archivos de reporte mensual de hidrocarburos. Está desarrollado con JavaScript y Node.js, apoyado en librerías como Chart.js para gráficas y DataTables para tablas dinámicas. Su diseño prioriza la usabilidad, permitiendo cargar archivos mediante drag & drop y mostrando una vista previa estructurada del contenido. El sistema genera un dashboard analítico que resume volúmenes recibidos, entregados e ingresos, con desglose por producto (Regular, Premium, Diesel). Integra un motor de validación que detecta inconsistencias críticas, advertencias e informativas, clasificándolas visualmente para facilitar la revisión. La interfaz utiliza un esquema de colores y semáforos que permite identificar rápidamente el nivel de severidad de cada error.',
+        technologies: ['JavaScript', 'Node.js', 'Chart.js'],
+        category: 'web',
+        status: 'completed',
+        featured: true,
+        images: [
+          '/portafolio/images/65.png',
+          '/portafolio/images/66.png',
+          '/portafolio/images/67.png',
+          '/portafolio/images/68.png',
+          '/portafolio/images/69.png',
+          '/portafolio/images/70.png',
+          '/portafolio/images/71.png'
+        ],
+        demoUrl: null,
+        githubUrl: null,
+        createdAt: '2026-03-05',
+        updatedAt: '2026-03-05'
       }
     ],
 
